@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>
+        Apollo - The Blog
+    </title>
+    
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Exo">
+
+    <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+        />
+
+    
+<link rel="stylesheet" href="/libs/highlight/styles/monokai-sublime.css">
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script> -->
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Apollo - The Blog" type="application/atom+xml">
+</head>
+
+<body id="bodyx">
+    <div class="hd posts">
+    <a href="/index.html"><i class="fa fa-reply replay-btn" aria-hidden="true"></i></a>
+    <div class="post-title">
+        <h5>
+            My Experience Theming Windows 10
+        </h5>
+        <hr>
+    </div>
+    <div class="post-content post-box">
+        <p>I recently dove into the world of <strong>Windows 10 theming</strong>, and thought I should share my experience. I am running the following at the time of writing:</p>
+<ul>
+<li>Windows 10 (dual boot with Linux)</li>
+<li>Version 1909 </li>
+<li>Build #18363.900</li>
+</ul>
+<p>Compared to Linux, Windows has been restricted in many aspects, including customization. You can only change a few desktop tones and colors, and the rest is hidden behind a registry which requires a lot of tweaking to get to. Most of this can’t be done by hand, because Windows designed that part to only be done by it’s own programs, and is therefore very hard to read.</p>
+<p>There also aren’t that many tutorials out there on how to theme Windows with a patcher, so you can use this post as a torch! I’ll include links to everything so you can check them out yourself.</p>
+<h3 id="Quick-Word-of-Caution"><a href="#Quick-Word-of-Caution" class="headerlink" title="Quick Word of Caution"></a>Quick Word of Caution</h3><p>Theming Windows is fun and can have a great end result, but I suggest creating a <a href="https://www.howtogeek.com/howto/windows-vista/using-windows-vista-system-restore/" target="_blank" rel="noopener">system restore point</a> before continuing. If anything goes wrong, you can always restore to that and have nothing to worry about.</p>
+<h1 id="How-I-Got-Started"><a href="#How-I-Got-Started" class="headerlink" title="How I Got Started"></a>How I Got Started</h1><p>I stumbled upon <a href="https://www.deviantart.com/niivu/art/ko-Z-for-Windows-10-842117943" target="_blank" rel="noopener">this post</a> while browsing DeviantArt one day! The user who posted that theme (<a href="https://www.deviantart.com/niivu" target="_blank" rel="noopener">niivu</a>) has created a few different Windows themes, and that’s how I learned what tools to use and where.</p>
+<ul>
+<li><strong>UltraUXThemePatcher</strong></li>
+<li><strong>OldNewExplorer</strong></li>
+<li><strong>StartIsBack</strong></li>
+<li><strong>WinAeroTweaker</strong></li>
+</ul>
+<p>The tools above are recommended in various places, and I’ll tell you what I think of each.</p>
+<h3 id="UltraUXThemePatcher"><a href="#UltraUXThemePatcher" class="headerlink" title="UltraUXThemePatcher"></a>UltraUXThemePatcher</h3><p><em>link: <a href="http://www.syssel.net/hoefs/software_uxtheme.php?lang=en" target="_blank" rel="noopener">ultrauxthemepatcher</a></em></p>
+<p>A UX patcher in Windows is very similar to the GNOME tweak tool in Debian Linux distros, except it specializes in breaking open the theming capabilities of Windows. Many of the guides online for Windows theming say to use this patcher, but DO NOT USE IT. </p>
+<p><a href="https://github.com/namazso/SecureUxTheme" target="_blank" rel="noopener">SecureUXThemePatcher</a> is a better patcher that allows you to theme without modifying system files. It also fixes a few bugs found in UltraUXThemePatcher, such as a few colors reverting to their defaults randomly.</p>
+<h4 id="How-I-Used-It"><a href="#How-I-Used-It" class="headerlink" title="How I Used It"></a>How I Used It</h4><ul>
+<li>Patched the Nord theme onto Windows</li>
+</ul>
+<h3 id="OldNewExplorer"><a href="#OldNewExplorer" class="headerlink" title="OldNewExplorer"></a>OldNewExplorer</h3><p><em>link: <a href="https://msfn.org/board/topic/170375-oldnewexplorer-119/" target="_blank" rel="noopener">oldnewexplorer</a></em></p>
+<p>OldNewExplorer is a tweak for Windows that makes the file explorer extremely customizable. Here’s a list of the things it can do:</p>
+<ul>
+<li>Restore device/drive grouping (moving things from devices/drives section)</li>
+<li>Remove unused folders that were added in Windows 8 that no one uses</li>
+<li>Remove the ribbon (most useful!)</li>
+<li>Restore the details pane at the bottom of the explorer</li>
+<li>Improve styling capabilities</li>
+</ul>
+<h4 id="How-I-Used-It-1"><a href="#How-I-Used-It-1" class="headerlink" title="How I Used It"></a>How I Used It</h4><ul>
+<li>The ribbon remover was particularly unhelpful, it didn’t get rid of the ribbon for me. I used <a href="https://winaero.com/download.php?view.18" target="_blank" rel="noopener">this tool</a> instead.</li>
+<li>Removed the quick access folder</li>
+<li>Reordered drive groups</li>
+</ul>
+<h3 id="StartIsBack"><a href="#StartIsBack" class="headerlink" title="StartIsBack"></a>StartIsBack</h3><p><em>link: <a href="http://startisback.com/" target="_blank" rel="noopener">startisback</a></em></p>
+<p>After glancing at the site above, you may be thinking <em>ewww thats old, Windows 10 start menu was better</em>, you’re partially right. Using StartIsBack by itself without theming anything does not look great at all. However, with some styling changes, it can look better than the Windows 10 one!</p>
+<h4 id="How-I-Used-It-2"><a href="#How-I-Used-It-2" class="headerlink" title="How I Used It"></a>How I Used It</h4><ul>
+<li>Modified the original Windows 10 start menu into a <a href="https://www.nordtheme.com/" target="_blank" rel="noopener">Nord</a> theme</li>
+<li>Minimalized the dock</li>
+</ul>
+<h3 id="WinAeroTweaker"><a href="#WinAeroTweaker" class="headerlink" title="WinAeroTweaker"></a>WinAeroTweaker</h3><p><em>link: <a href="https://winaero.com/comment.php?comment.news.1836" target="_blank" rel="noopener">winaerotweaker</a></em></p>
+<p>WinAeroTweaker is a small application that is actually pretty powerful. It contains a huge variety of tweaks that can change the Windows experience drastically.</p>
+<h4 id="How-I-Used-It-3"><a href="#How-I-Used-It-3" class="headerlink" title="How I Used It"></a>How I Used It</h4><ul>
+<li>Shrinking taskbar size</li>
+<li>Reordering taskbar widgets</li>
+<li>Resizing desktop shortcuts</li>
+</ul>
+<h1 id="Tutorial-Patching-a-Nord-theme"><a href="#Tutorial-Patching-a-Nord-theme" class="headerlink" title="Tutorial: Patching a Nord theme"></a>Tutorial: Patching a Nord theme</h1><p>This following section will walk you through changing the Windows scheme to match <a href="nordtheme.com">this</a>. We will change the start menu, the file explorer, system icons, system theme, taskbar, and even music player!</p>
+<p><em>Stay tuned for this section, currently WIP</em></p>
+
+    </div>
+    
+        <!-- Begin Mailchimp Signup Form -->
+    <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        #mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+
+    <div id="mc_embed_signup" style="margin-bottom: 16%;">
+        <form action="https://rohanbansal.us10.list-manage.com/subscribe/post?u=eb650c2d4e1adedd983e74b4e&amp;id=3c40ef0756" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+            <label for="mce-EMAIL">Subscribe</label>
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_eb650c2d4e1adedd983e74b4e_3c40ef0756" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="background-color: #2F323B;"></div>
+            </div>
+        </form>
+    </div>
+
+    <!--End mc_embed_signup-->
+</div>
+    <div class="footer" id="footer">
+    <p>Copyright © 2020 Rohan Bansal
+    </p>
+</div>
+<input type="hidden" id="web_style" value="black">
+
+<script src="/libs/jquery.min.js"></script>
+
+
+<script src="/libs/highlight/highlight.pack.js"></script>
+
+
+<script src="/js/js.js"></script>
+
+<style type="text/css">
+.v * {
+    color: #698fca;
+}
+
+.v .vlist .vcard .vhead .vsys {
+    color: #3a3e4a;
+}
+
+.v .vlist .vcard .vh .vmeta .vat {
+    color: #638fd5;
+}
+
+.v .vlist .vcard .vhead .vnick {
+    color: #6ba1ff;
+}
+
+.v a {
+    color: #8696b1;
+}
+
+.v .vlist .vcard .vhead .vnick:hover {
+    color: #669bfc;
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>
