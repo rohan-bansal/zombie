@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html>
+<head 4.0.0-rc.2'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+  <title>Workshop - Meme Songs With Arduino - Apollo | Rohan Bansal</title>
+  
+    <meta name="keywords" content="workshop, memes, arduino, tinkercad, coffin dance">
+  
+
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Apollo | Rohan Bansal">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+
+  
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+</head>
+
+<body>
+  <header class="l_header auto shadow blur" style='opacity: 0' >
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='/img/circle-cropped.png'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/custom.xml
+                  
+                  
+                  
+                    id="customxml"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>RSS
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://rohanbansal.me
+                  
+                  
+                  
+                    id="https:rohanbansalme"
+                  >
+                  <i class='fas fa-globe fa-fw'></i>Main Site
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>Archives
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>About
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/custom.xml
+                  
+                  
+                  
+                    id="customxml"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>RSS
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://rohanbansal.me
+                  
+                  
+                  
+                    id="https:rohanbansalme"
+                  >
+                  <i class='fas fa-globe fa-fw'></i>Main Site
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>Archives
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>About
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+  <div class="l_body">
+    <div class="l_cover">
+
+  
+  
+      <div class='cover-wrapper post focus' style="display: none;">
+        
+          <div class='cover-bg lazyload placeholder' data-bg="/img/pic7.jpg"></div>
+        
+        <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">Apollo</p>
+    
+    
+      <p class="subtitle">My musings, experiences, and tech talks</p>
+    
+  </div>
+  <div class='bottom'>
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/about/"
+              
+              
+              id="about">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg'><p>About</p>
+            </a>
+          
+            <a href="/links/"
+              
+              
+              id="links">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg'><p>Links</p>
+            </a>
+          
+            <a href="/subscribe/"
+              
+              
+              id="subscribe">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>Subscribe</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+      </div>
+  
+
+</div>
+
+    <div class='safearea'>
+      <div class='body-wrapper' id="pjax-container">
+        
+          <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+
+
+<div id="pjax-data" style="display: none">
+  <div id="pjax-ispage">true</div>
+  <div id="pjax-pageTitle">Workshop - Meme Songs With Arduino</div>
+  <div id="pjax-enable-cover">true</div>
+  <div id="pjax-comment-path"></div>
+  <div id="pjax-comment-placeholder"></div>
+</div>
+
+
+<script>
+  // 处理封面 此时 jquery 还没加载
+  if ("none" == "none") { // 移除封面
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "none";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
+  } else {
+    if ("none" == "half") { // 半屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half');
+      document.getElementsByClassName('scroll-down')[0].style.display = "none";
+    } else if ("none" == "full") { // 全屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full');
+      document.getElementsByClassName('scroll-down')[0].style.display = "";
+    }
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show");
+  }
+</script>
+
+
+        
+        
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  <div class='article-header'>
+    
+    <div class="article-meta" id="top">
+      
+      
+      
+        <h1 class="title">
+          <a href="/2020/10/27/Workshop-Meme-Songs-With-Arduino/">
+            Workshop - Meme Songs With Arduino
+          </a>
+        </h1>
+        <div class='new-meta-box'>
+          
+            
+              
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://avatars1.githubusercontent.com/u/36248672?s=460&u=aa6e1ef0783d385055d7b3620544b29eb2a6f01b&v=4">
+    <p>Rohan Bansal</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>Date : Oct 27, 2020</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+        </div>
+      
+    </div>
+  </div>
+
+
+  <div class="article-entry" itemprop="articleBody">
+    
+    
+    <h1 id="Meme-Songs-with-Arduino"><a href="#Meme-Songs-with-Arduino" class="headerlink" title="Meme Songs with Arduino"></a>Meme Songs with Arduino</h1><p><img src="https://cloud-psj7hfkrk.vercel.app/0thumbnail.png" class="lazyload" data-srcset="https://cloud-psj7hfkrk.vercel.app/0thumbnail.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="thumbnail"></p>
+<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Meme songs are everywhere! I bet you (the reader) have been rickrolled at least once, or heard All Star/the Coffin Dance around the internet. In this beginner workshop, you’ll be building/coding an Arduino circuit that will be able to play music!</p>
+<p>We are going to use Tinkercad’s interactive circuit builder, which is excellent; it’s like building an Arduino circuit in real life. With the expertise you gain from building this circuit online, recreating it with physical components should be a breeze!</p>
+<p><strong>What You’ll Learn</strong></p>
+<ul>
+<li>How to wire a circuit, taking into account ground/power/signal</li>
+<li>How to code in the Arduino C language</li>
+</ul>
+<p><strong>What You’ll Need</strong></p>
+<ul>
+<li>Extremely basic knowledge of any programming language, does not have to be Arduino C</li>
+<li>Basic knowledge of music notes</li>
+</ul>
+<p><strong>Final Circuit</strong></p>
+<ul>
+<li>Here’s the demo/final code: <a href="https://www.tinkercad.com/things/92aTTFLqRgP" target="_blank" rel="noopener">demo</a> </li>
+</ul>
+<hr>
+<h2 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h2><p>Let’s get started! Head over to <a href="https://www.tinkercad.com" target="_blank" rel="noopener">tinkercad</a> and register for an account in the top right. You should then be redirected to a dashboard, at which point you can create a new circuit diagram. Refer to the GIF below if you’re having trouble:</p>
+<p><img src="https://cloud-98eknqy7u.vercel.app/0createproject.gif" class="lazyload" data-srcset="https://cloud-98eknqy7u.vercel.app/0createproject.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="createproject"></p>
+<h2 id="The-Physics-of-Music"><a href="#The-Physics-of-Music" class="headerlink" title="The Physics of Music"></a>The Physics of Music</h2><p>Music, in general terms, can be described as sound. Very pleasant, bop-worthy sound! If we were to abstract sound even further, it can be thought of as waves that look like this: </p>
+<p><img src="https://www.teachmeaudio.com/application/files/4115/8670/6247/sine-wave.svg" class="lazyload" data-srcset="https://www.teachmeaudio.com/application/files/4115/8670/6247/sine-wave.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="soundwaves"></p>
+<p>Basic science lesson time! The humps of the wave are called wave crests, and the valley are troughs.  Wavelength is the distance between two adjacent crests on the wave. The important part, though, is the <a href="https://www.wikiwand.com/en/Frequency" target="_blank" rel="noopener"><strong>frequency</strong></a>. This is how many times a wavelength passes a fixed point in a given amount of time–frequency is measured in <a href="https://www.wikiwand.com/en/Hertz" target="_blank" rel="noopener">hertz</a>. </p>
+<p>What’s the point, you say? The frequency of the wave is directly related to what you hear! The higher the frequency, the higher the <a href="https://www.wikiwand.com/en/Pitch_(music)" target="_blank" rel="noopener">pitch</a>, and vice versa. This forms the basis for <a href="https://www.wikiwand.com/en/Musical_note" target="_blank" rel="noopener"><strong>music notes</strong></a>. </p>
+<p>This is important because Arduino has no idea what a music note is, and neither does the buzzer we’ll be programming. To specify what note we want to play, we need to give Arduino the hertz value. For example, the note C4 is about 261.6 hz! For a full list of notes and their frequencies, check out <a href="https://pages.mtu.edu/~suits/notefreqs.html" target="_blank" rel="noopener">this link</a>. We’ll be using that list soon to arrange the coffin dance.</p>
+<h2 id="Building-the-Circuit"><a href="#Building-the-Circuit" class="headerlink" title="Building the Circuit"></a>Building the Circuit</h2><p>Now that we have a new project window open, you’ll see multiple things:</p>
+<p><img src="https://cloud-7anwdjqtl.vercel.app/0workspace.png" class="lazyload" data-srcset="https://cloud-7anwdjqtl.vercel.app/0workspace.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="workspace"></p>
+<p>Here’s a rundown of the items in each rectangle, from left to right:</p>
+<p><em>Red</em> : the name/title of your project</p>
+<p><em>Green</em> : a few actions pertinent to devices, such as rotate, delete, undo/redo, etc.</p>
+<p><em>Blue</em> : the code window toggle button, simulate button, and methods to export/share</p>
+<p><em>Yellow</em>: the components window with a huge variety of devices to use</p>
+<p>Now, we have to do two things to start off. Rename the project by clicking the name in the top left, and drag in an Arduino from the left components bar!</p>
+<p><img src="https://cloud-ot05nrpna.vercel.app/0rename_and_arduino.gif" class="lazyload" data-srcset="https://cloud-ot05nrpna.vercel.app/0rename_and_arduino.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="rename_plus_arduino"></p>
+<p>We also need to add the components that will be making music in the first place–piezos! Piezo is short for <a href="https://en.wikipedia.org/wiki/Buzzer#Piezoelectric_2" target="_blank" rel="noopener">piezoelectric speaker</a>, an oscillating circuit that projects a sound wave. Go ahead drag <strong>two piezos</strong> into the main view, along with  <strong>two resistors.</strong> If you can’t find them, use the search bar. </p>
+<p>You should have this so far:</p>
+<p><img src="https://cloud-mu05rgdue.vercel.app/0screenshot_from_2020-10-20_18-20-31.png" class="lazyload" data-srcset="https://cloud-mu05rgdue.vercel.app/0screenshot_from_2020-10-20_18-20-31.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="piezo_and_resistors"> </p>
+<p>Like any electrical device, a circuit needs to be completed to activate it. In the piezo’s case, it needs a signal (aka power) and ground. </p>
+<p>Ground always connects to the Arduino’s ground port (next to pin 13 at the top of the board), but since a signal is variable, it can be connected to any of the digital pins.</p>
+<p>I won’t go into detail about digital pins and analog pins, but you can definitely learn more <a href="https://learn.sparkfun.com/tutorials/analog-vs-digital/all" target="_blank" rel="noopener">here</a>. All you need to know for this workshop is that the hertz value inputted into code is going to be sent over the signal pin to the piezo.</p>
+<p>Next, we need to configure the resistors to the right resistance value. This ensures the signal sent to the piezos does not exceed a certain limit and is smooth. Click both resistors and change the resistance values in the box in the top right to the below:</p>
+<p><img src="https://cloud-q7ciep09e.vercel.app/0resistor_config.png" class="lazyload" data-srcset="https://cloud-q7ciep09e.vercel.app/0resistor_config.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="resistor_config"> </p>
+<p>You can ignore the name field, as that isn’t important to the circuit, just for labeling purposes. Make sure that the dropdown is set to plain <a href="ynderhost.com/">ohms</a> (symbol for electrical resistance).</p>
+<p>It’s time to wire up the circuit! By clicking a port on either the piezo, resistor, or Arduino, you should be able to create a wire. Wire the circuit as below:</p>
+<p><img src="https://cloud-o5uuil1gg.vercel.app/0correct_wiring.png" class="lazyload" data-srcset="https://cloud-o5uuil1gg.vercel.app/0correct_wiring.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="correct_wiring"> </p>
+<p>Let’s go over the elements of this diagram. Following pin 6, the signal wire first connects to a resistor, which connects to one piezo’s signal input. The piezo’s other port routes the electricity to ground, completing the circuit. The mini-circuit is the same for pin 7! Don’t be intimidated by electronics, in hindsight it can be very simple.</p>
+<p>Hooray! You finished <strong>building the circuit</strong>. Time to play some meme music!</p>
+<h2 id="Programming-the-Circuit"><a href="#Programming-the-Circuit" class="headerlink" title="Programming the Circuit"></a>Programming the Circuit</h2><p>Remember the code window toggle button in the blue rectangle in the picture earlier? Go ahead and click that and toggle from block code to text code. Here’s how to do that:</p>
+<p><img src="https://cloud-g16ym3hgq.vercel.app/0convert_to_textcode.gif" class="lazyload" data-srcset="https://cloud-g16ym3hgq.vercel.app/0convert_to_textcode.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="convert_code_type"></p>
+<p>We’re now ready to start coding! Go ahead and delete everything in the window and type out the following:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The <code>setup()</code> function is only run once during the entire runtime: at the beginning. You can think of it as setting up the program for what’s to come.</p>
+<p>The <code>loop()</code> function is run probably hundreds of times a second!  It loops repeatedly, until the program either crashes or decidedly ends.</p>
+<p>For the purposes of this workshop, you don’t need to know what <code>void</code> does; if you want to, check this out: <a href="https://www.geeksforgeeks.org/java-identifiers/" target="_blank" rel="noopener">identifier</a> (the link takes you to a Java tutorial, but in terms of identifiers, everything is the same)</p>
+<p>In the <code>setup()</code> function, we have to do 2 things:</p>
+<ul>
+<li>tell the Arduino we’re going to use pin 6</li>
+<li>tell the Arduino we’re going to use pin 7</li>
+</ul>
+<p>To do this, we need to specify that both those pins are going to be outputs, not inputs (since we’re transmitting sound <em>from</em> the Arduino <em>to</em> the piezos):</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="built_in">pinMode</span>(<span class="number">6</span>, <span class="literal">OUTPUT</span>);</span><br><span class="line">  <span class="built_in">pinMode</span>(<span class="number">7</span>, <span class="literal">OUTPUT</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>There are multiple pin modes besides OUTPUT, we just won’t use them for this workshop. To learn more, check out <a href="https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/" target="_blank" rel="noopener">this link</a>. </p>
+<p>Let’s try making some basic sounds! In the <code>loop()</code> function, add the following and hit the <strong>Start Simulation</strong> button when done. You should hear one note being played repeatedly!</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">tone</span>(<span class="number">6</span>, <span class="number">261</span>, <span class="number">1000</span>);</span><br><span class="line">    <span class="built_in">delay</span>(<span class="number">1000</span>);</span><br><span class="line">    <span class="built_in">noTone</span>(<span class="number">6</span>);</span><br><span class="line">    <span class="built_in">delay</span>(<span class="number">200</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Line by line:</p>
+<ol>
+<li>we call a built-in tone function that takes the following as parameters (left to right): pin number, hertz (note), duration (milliseconds)</li>
+<li>delay the program by 1000 milliseconds to allow the tone to play out</li>
+<li>disable the tone from the piezo connected to pin 6</li>
+<li>delay again for 200 milliseconds to allow for a grace period between notes</li>
+</ol>
+<p>Now, the point of having two piezos is for the sound to alternate between them! To do this, we need to keep track of the current speaker being used. Go ahead and add a variable that does this at the very top of the file, we’ll come back to it later:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> currentSpeaker = <span class="number">6</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="built_in">pinMode</span>(<span class="number">6</span>, <span class="literal">OUTPUT</span>);</span><br><span class="line">  <span class="built_in">pinMode</span>(<span class="number">7</span>, <span class="literal">OUTPUT</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">tone</span>(<span class="number">6</span>, <span class="number">261</span>, <span class="number">1000</span>);</span><br><span class="line">    <span class="built_in">delay</span>(<span class="number">1000</span>);</span><br><span class="line">    <span class="built_in">noTone</span>(<span class="number">6</span>);</span><br><span class="line">    <span class="built_in">delay</span>(<span class="number">200</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This code works, and we can by all means create a song with this, but typing out <em>four lines per note</em> is going to be a major hassle. This is where <a href="https://www.tutorialspoint.com/computer_programming/computer_programming_functions.htm" target="_blank" rel="noopener">functions</a>, reusable pieces of code, come in!</p>
+<p>Let’s create a new function underneath <code>setup()</code> , called <code>play()</code> that takes in two values, hertz and wait time in milliseconds. </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">play</span><span class="params">(<span class="keyword">float</span> hz, <span class="keyword">int</span> wait)</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Let’s also assume we’re only going to be using the piezo on pin 6 for now. Add the following inside the <code>play()</code> function:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">play</span><span class="params">(<span class="keyword">float</span> hz, <span class="keyword">int</span> wait)</span> </span>&#123;</span><br><span class="line">  <span class="built_in">tone</span>(<span class="number">6</span>, hz, <span class="number">1000</span>);</span><br><span class="line">  <span class="built_in">delay</span>(<span class="number">200</span>);</span><br><span class="line">  <span class="built_in">noTone</span>(<span class="number">6</span>);</span><br><span class="line">  <span class="built_in">delay</span>(wait);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>What did we do here? Since we’re only using the piezo on pin 6, why do we have to specify it all the time? To make our lives easier, we can add that manually to the function so when we call <code>play()</code>, no pin number is required. We also assume the delay and note length, as those will probably stay constant during this workshop.</p>
+<p>Let’s test this function out! Delete all the code inside <code>loop()</code> , and add this instead:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    play(<span class="number">261</span>, <span class="number">500</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Hit the <strong>Start Simulation</strong> button, and you should hear a note playing repeatedly. This time, we only did it in <em>one line</em>!</p>
+<p>How can we modify this now to alternate sounds between both piezos? Using <a href="https://www.programiz.com/c-programming/c-if-else-statement" target="_blank" rel="noopener"><code>if</code> statements</a>! Modify your <code>play()</code> function as below:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">play</span><span class="params">(<span class="keyword">float</span> hz, <span class="keyword">int</span> wait)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">tone</span>(currentSpeaker, hz, <span class="number">1000</span>);</span><br><span class="line">  <span class="built_in">delay</span>(<span class="number">200</span>);</span><br><span class="line">  <span class="built_in">noTone</span>(currentSpeaker);</span><br><span class="line">  <span class="built_in">delay</span>(wait);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">if</span>(currentSpeaker == <span class="number">6</span>) &#123;</span><br><span class="line">    currentSpeaker += <span class="number">1</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      currentSpeaker -= <span class="number">1</span>;</span><br><span class="line">  &#125;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>What did we do here? Instead of setting the piezo manually, we have the <code>currentSpeaker</code> variable do it for us! Since the variable is set to either 6 or 7, it’s just a matter of switching between them every time the function is called. This is done with the if statement at the end; if the value is 6, it changes it to 7, and if it’s 7, it changes it back to 6.</p>
+<p>Hit <strong>Start Simulation</strong> once more and you should see the sounds alternating from both piezos!</p>
+<p><img src="https://cloud-62jdtr82i.vercel.app/tenor.gif" class="lazyload" data-srcset="https://cloud-62jdtr82i.vercel.app/tenor.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="woohoo"></p>
+<p>The hard part is done, let’s make some music now! Referring to <a href="https://pages.mtu.edu/~suits/notefreqs.html" target="_blank" rel="noopener">this link</a> with all the possible notes and frequencies, here’s how to play the coffin dance (replace <code>loop()</code> contents):</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  play(<span class="number">329</span>, <span class="number">200</span>); <span class="comment">// F-4</span></span><br><span class="line">  play(<span class="number">329</span>, <span class="number">70</span>);  <span class="comment">// F-4</span></span><br><span class="line">  play(<span class="number">493</span>, <span class="number">100</span>); <span class="comment">// B-4</span></span><br><span class="line">  play(<span class="number">440</span>, <span class="number">200</span>); <span class="comment">// A-4</span></span><br><span class="line">  play(<span class="number">392</span>, <span class="number">200</span>); <span class="comment">// G-4</span></span><br><span class="line">  play(<span class="number">369.99</span>, <span class="number">100</span>); <span class="comment">// F#-4</span></span><br><span class="line">  play(<span class="number">369.99</span>, <span class="number">100</span>); <span class="comment">// F#-4</span></span><br><span class="line">  play(<span class="number">369.99</span>, <span class="number">120</span>); <span class="comment">// F#-4</span></span><br><span class="line">  play(<span class="number">440</span>, <span class="number">150</span>); <span class="comment">// A-4</span></span><br><span class="line">  play(<span class="number">392</span>, <span class="number">80</span>); <span class="comment">// G-4</span></span><br><span class="line">  play(<span class="number">369.99</span>, <span class="number">100</span>); <span class="comment">// F#-4</span></span><br><span class="line">  play(<span class="number">329</span>, <span class="number">150</span>); <span class="comment">// F-4</span></span><br><span class="line">  play(<span class="number">246.94</span>, <span class="number">150</span>); <span class="comment">// B-3</span></span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  play(<span class="number">392</span>, <span class="number">70</span>); <span class="comment">// G-4</span></span><br><span class="line">  play(<span class="number">369.99</span>, <span class="number">70</span>); <span class="comment">// F#-4</span></span><br><span class="line">  play(<span class="number">392</span>, <span class="number">70</span>); <span class="comment">// G-4</span></span><br><span class="line">  play(<span class="number">369.99</span>, <span class="number">70</span>); <span class="comment">// F#-4</span></span><br><span class="line">  play(<span class="number">392</span>, <span class="number">70</span>); <span class="comment">// G-4</span></span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  play(<span class="number">329</span>, <span class="number">150</span>); <span class="comment">// F-4</span></span><br><span class="line">  play(<span class="number">246.94</span>, <span class="number">150</span>); <span class="comment">// B-3</span></span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  play(<span class="number">392</span>, <span class="number">70</span>); <span class="comment">// G-4</span></span><br><span class="line">  play(<span class="number">369.99</span>, <span class="number">70</span>); <span class="comment">// F#-4</span></span><br><span class="line">  play(<span class="number">392</span>, <span class="number">70</span>); <span class="comment">// G-4</span></span><br><span class="line">  play(<span class="number">369.99</span>, <span class="number">70</span>); <span class="comment">// F#-4</span></span><br><span class="line">  play(<span class="number">392</span>, <span class="number">70</span>); <span class="comment">// G-4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Go ahead and paste that in and hit <strong>Run Simulation</strong> if you want to hear the coffin dance. I put in the note names in the comments besides each note so you can reference the note frequencies page above to create your own songs!</p>
+<p>The final code is available in the demo at the top of this page. If you have a syntax error or a logic error, go ahead and cross-check against that.</p>
+<h2 id="Further-Hacking"><a href="#Further-Hacking" class="headerlink" title="Further Hacking"></a>Further Hacking</h2><p><img src="https://cloud-mlx5oz5hm.vercel.app/tenor.gif" class="lazyload" data-srcset="https://cloud-mlx5oz5hm.vercel.app/tenor.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="yay"></p>
+<p>This program went over the basics of how to make music; there’s a lot to be changed! See if you can mess with note durations to create chords (since Arduino does not support playing multiple notes at once), arrange your own songs, etc. If you think your creation is epic, please do share it with the Hack Club community!</p>
+<p>Here are some branches of the project that build upon the code written in this workshop:</p>
+<ul>
+<li><strong>Third Piezo</strong>: <a href="https://www.tinkercad.com/things/hNY47uC3iJF" target="_blank" rel="noopener">demo and code</a></li>
+<li><strong>All Star, by Smash Mouth</strong>: <a href="https://www.tinkercad.com/things/fMHcz0D6nag" target="_blank" rel="noopener">demo and code</a></li>
+<li><strong>Fake Chords</strong>: <a href="https://www.tinkercad.com/things/dgJta8YNPuA" target="_blank" rel="noopener">demo and code</a></li>
+</ul>
+
+    
+      
+      <div class='footer'>
+        
+        
+        
+          <div class='copyright'>
+            <blockquote>
+              
+                
+                  
+                
+              
+                
+                  <p><a href=http://blog.rohanbansal.me/2020/10/27/Workshop-Meme-Songs-With-Arduino/>http://blog.rohanbansal.me/2020/10/27/Workshop-Meme-Songs-With-Arduino/</a></p>
+                
+              
+            </blockquote>
+          </div>
+        
+        
+      </div>
+    
+  </div>
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-27T20:13:00-07:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>Updated : Oct 27, 2020</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/workshop-memes-arduino-tinkercad-coffin-dance/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>workshop, memes, arduino, tinkercad, coffin dance</p></a></div>
+
+
+        
+      
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2020/09/19/Workshop-Templated-Robot-Emails/'>
+          <p class='title'>Workshop - Templated Robot Emails<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Robotic Emails
+Overview
+In this workshop, you’ll be using good ol’ Python to send emails using a ...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> Comments</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>Contents</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Overview"><span class="toc-text">Overview</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Setup"><span class="toc-text">Setup</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Physics-of-Music"><span class="toc-text">The Physics of Music</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Building-the-Circuit"><span class="toc-text">Building the Circuit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Programming-the-Circuit"><span class="toc-text">Programming the Circuit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Further-Hacking"><span class="toc-text">Further Hacking</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+      </div>
+      
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+          
+            
+              <a href="https://github.com/rohan-bansal"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="https://twitter.com/rbansal22"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/018-twitter.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/018-twitter.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/045-telegram.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/045-telegram.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+</div>
+        <div><p><i>Banner drawn by Tithi Luadthong</i></p></div>
+        <div><p><strong>Based on Volantis</strong></p></div>
+      
+    
+      
+        
+      
+    
+      
+         
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="/">Copyright © 2019-2020 Rohan Bansal</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+      <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+  </div>
+  <div>
+    
+    <!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  function pjax_fancybox() {
+    $(".md").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      // 背景层
+      var bgDiv = document.createElement("div");
+      $(bgDiv).addClass("bg");
+      if ($(this).attr('bg')) {
+        $(bgDiv).css('background', $(this).attr('bg'));
+      }
+      $(this).wrap(bgDiv); // 背景层
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".article-entry").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  $(function () {
+    pjax_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+<!-- optional -->
+
+  <script>
+  
+  var SEARCH_SERVICE = "hexo" || "hexo";
+  var ROOT = "/" || "/";
+  if (!ROOT.endsWith('/')) ROOT += '/';
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+  
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+
+
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link'.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) || "Write something!";
+
+    let path = $.trim($('#pjax-comment-path').text());
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+
+    var valine = new Valine();
+    valine.init({
+      el: '#valine_container',
+      meta: meta,
+      placeholder: pagePlaceholder,
+      path: path,
+      appId: "",
+      appKey: "",
+      pageSize: '10',
+      avatar: 'robohash',
+      lang: 'en',
+      visitor: 'true',
+      highlight: 'true',
+      mathJax: 'false',
+      enableQQ: 'true',
+      requiredFields: requiredFields,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps
+    })
+  }
+
+  $(function () {
+    pjax_valine();
+  });
+</script>
+
+
+
+
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+
+  
+    
+<script src="/js/search.js"></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- more -->
+
+
+    
+      
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <script>
+      window.ShowLoading = function() {
+        NProgress.start();
+      };
+      window.HideLoading = function() {
+        NProgress.done();
+      }
+    </script>
+  
+</div>
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      $.fancybox.close();    // 关闭弹窗
+      $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
+      $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      $('.s-top').unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      window.ShowLoading();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+      // 
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+        pjax_fancybox();
+        
+        
+        
+        
+          pjax_initCopyCode();
+        
+        
+          pjax_valine();
+        
+        
+        
+        
+        
+      } catch (e) {
+        console.log(e);
+      }
+      window.HideLoading();
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.HideLoading();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+
+    
+  </div>
+</body>
+</html>

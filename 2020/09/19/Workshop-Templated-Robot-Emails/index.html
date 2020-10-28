@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html>
+<head 4.0.0-rc.2'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+  <title>Workshop - Templated Robot Emails - Apollo | Rohan Bansal</title>
+  
+    <meta name="keywords" content="workshop, email, python">
+  
+
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Apollo | Rohan Bansal">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+
+  
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+</head>
+
+<body>
+  <header class="l_header auto shadow blur" style='opacity: 0' >
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='/img/circle-cropped.png'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/custom.xml
+                  
+                  
+                  
+                    id="customxml"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>RSS
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://rohanbansal.me
+                  
+                  
+                  
+                    id="https:rohanbansalme"
+                  >
+                  <i class='fas fa-globe fa-fw'></i>Main Site
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>Archives
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>About
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/custom.xml
+                  
+                  
+                  
+                    id="customxml"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>RSS
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://rohanbansal.me
+                  
+                  
+                  
+                    id="https:rohanbansalme"
+                  >
+                  <i class='fas fa-globe fa-fw'></i>Main Site
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>Archives
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>About
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+  <div class="l_body">
+    <div class="l_cover">
+
+  
+  
+      <div class='cover-wrapper post focus' style="display: none;">
+        
+          <div class='cover-bg lazyload placeholder' data-bg="/img/pic7.jpg"></div>
+        
+        <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">Apollo</p>
+    
+    
+      <p class="subtitle">My musings, experiences, and tech talks</p>
+    
+  </div>
+  <div class='bottom'>
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/about/"
+              
+              
+              id="about">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg'><p>About</p>
+            </a>
+          
+            <a href="/links/"
+              
+              
+              id="links">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg'><p>Links</p>
+            </a>
+          
+            <a href="/subscribe/"
+              
+              
+              id="subscribe">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>Subscribe</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+      </div>
+  
+
+</div>
+
+    <div class='safearea'>
+      <div class='body-wrapper' id="pjax-container">
+        
+          <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+
+
+<div id="pjax-data" style="display: none">
+  <div id="pjax-ispage">true</div>
+  <div id="pjax-pageTitle">Workshop - Templated Robot Emails</div>
+  <div id="pjax-enable-cover">true</div>
+  <div id="pjax-comment-path"></div>
+  <div id="pjax-comment-placeholder"></div>
+</div>
+
+
+<script>
+  // 处理封面 此时 jquery 还没加载
+  if ("none" == "none") { // 移除封面
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "none";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
+  } else {
+    if ("none" == "half") { // 半屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half');
+      document.getElementsByClassName('scroll-down')[0].style.display = "none";
+    } else if ("none" == "full") { // 全屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full');
+      document.getElementsByClassName('scroll-down')[0].style.display = "";
+    }
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show");
+  }
+</script>
+
+
+        
+        
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  <div class='article-header'>
+    
+    <div class="article-meta" id="top">
+      
+      
+      
+        <h1 class="title">
+          <a href="/2020/09/19/Workshop-Templated-Robot-Emails/">
+            Workshop - Templated Robot Emails
+          </a>
+        </h1>
+        <div class='new-meta-box'>
+          
+            
+              
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://avatars1.githubusercontent.com/u/36248672?s=460&u=aa6e1ef0783d385055d7b3620544b29eb2a6f01b&v=4">
+    <p>Rohan Bansal</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>Date : Sep 19, 2020</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+        </div>
+      
+    </div>
+  </div>
+
+
+  <div class="article-entry" itemprop="articleBody">
+    
+    
+    <h1 id="Robotic-Emails"><a href="#Robotic-Emails" class="headerlink" title="Robotic Emails"></a>Robotic Emails</h1><p><img src="https://cloud-48mv5ovk7.vercel.app/email.png" class="lazyload" data-srcset="https://cloud-48mv5ovk7.vercel.app/email.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Robot With Emails"></p>
+<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><hr>
+<p>In this workshop, you’ll be using good ol’ Python to send emails using a customizable template! The project should take about 20-30 minutes to complete.</p>
+<p>Here are some links to the final code and a live demo (<a href="https://repl.it" target="_blank" rel="noopener">repl.it</a>):</p>
+<p><em>Final Code: <a href="https://github.com/hackclub/hackclub/tree/main/workshops/robot_emails" target="_blank" rel="noopener">GitHub</a></em></p>
+<p><em>Demo: <a href="https://repl.it/@apexblade/RoboticEmails#main.py" target="_blank" rel="noopener">Live</a></em></p>
+<p><strong>Prerequisites</strong></p>
+<ul>
+<li>A Google account, preferably with <a href="https://www.google.com/landing/2step/" target="_blank" rel="noopener">2FA</a> disabled</li>
+</ul>
+<hr>
+<h2 id="Initial-Setup"><a href="#Initial-Setup" class="headerlink" title="Initial Setup"></a>Initial Setup</h2><p><a href="https://www.wikiwand.com/en/Simple_Mail_Transfer_Protocol" target="_blank" rel="noopener">SMTP</a> (Simple Mail Transfer Protocol) has been getting more and more secure as of late; and for good reason. To be able to send emails from your Google account, we need to give our python application access.</p>
+<p>Head over to <a href="https://myaccount.google.com/u/0/lesssecureapps?hl=en" target="_blank" rel="noopener">this link</a> and flick the “Allow less secure apps” lever to the on position. Google strictly allows only its own or verified software to interface with the creation/sending of emails; since you’re creating a python app, it’s necessary to tell Google that it’s acceptable.</p>
+<p><img src="https://cloud-f9wuongol.vercel.app/app_access.png" class="lazyload" data-srcset="https://cloud-f9wuongol.vercel.app/app_access.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="less secure app access"></p>
+<p>You will also need to complete <a href="https://accounts.google.com/b/0/DisplayUnlockCaptcha" target="_blank" rel="noopener">this captcha</a> to enable access for the next application that uses your credentials (this one). </p>
+<p><em>Quick Note</em>s</p>
+<p>If you happen to have 2 Factor Authentication enabled for your account, please follow <a href="https://support.google.com/accounts/answer/185833?hl=en" target="_blank" rel="noopener">this article</a> to generate an app password. When we write the program and input our account password, replace that with the app password you generated.</p>
+<p>After working on this project, it is recommended to turn the less secure apps lever back to it’s off position.</p>
+<hr>
+<h2 id="File-Setup"><a href="#File-Setup" class="headerlink" title="File Setup"></a>File Setup</h2><p>Head over to <a href="https://repl.it" target="_blank" rel="noopener">repl.it</a> and create a new <code>Python3</code> project. In the sidebar, a <code>main.py</code> file should already be created. Go ahead and create two more files:</p>
+<ul>
+<li><code>contacts.txt</code></li>
+<li><code>message.txt</code></li>
+</ul>
+<p>The <code>contacts.txt</code> file will contain emails and names that will be substituted into the message body later (can be customized). Feel free to add an email and a name to it, bu make sure it’s formatted exactly as below:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bobsmith@johndoe.com, Bob</span><br></pre></td></tr></table></figure>
+
+<p>In the <code>message.txt</code> file, add the following template, which we will process in our python script.</p>
+<ul>
+<li>The first line contains the subject of the email</li>
+<li>The rest of the lines contain the body</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Test Email</span><br><span class="line"></span><br><span class="line">Dear &#123;0&#125;,</span><br><span class="line"></span><br><span class="line">    Bacon ipsum dolor amet venison ball tip hamburger tenderloin bresaola ribeye pancetta ham chuck rump buffalo. T-bone cow pork, capicola jerky short loin prosciutto picanha porchetta ribeye. Pig ground round shank frankfurter drumstick, pork belly bresaola tongue. Pancetta alcatra bacon ground round kielbasa beef landjaeger cupim prosciutto sirloin tongue jowl.</span><br><span class="line"></span><br><span class="line">Sincerely,</span><br><span class="line">&lt;Your Name&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Please substitute <code>&lt;Your Name&gt;</code> with your name, as this won’t be substituted automatically in this workshop (feel free to add it in later though)! </p>
+<p><em>Quick Note</em></p>
+<p>Wondering where I got that spicy placeholder text? Check out <a href="https://baconipsum.com/?paras=5&type=all-meat&start-with-lorem=1" target="_blank" rel="noopener">Bacon Ipsum</a>.</p>
+<hr>
+<h2 id="Writing-Code"><a href="#Writing-Code" class="headerlink" title="Writing Code"></a>Writing Code</h2><p>I’ll take this moment to ask you <strong>not to copy and paste</strong>. It takes away from the learning experience (and in many cases, things need replacing).</p>
+<p>At the top of your <code>main.py</code> file, go ahead and add the following imports:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> smtplib</span><br><span class="line"><span class="keyword">from</span> email.mime.multipart <span class="keyword">import</span> MIMEMultipart</span><br><span class="line"><span class="keyword">from</span> email.mime.text <span class="keyword">import</span> MIMEText</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="https://docs.python.org/3/library/smtplib.html" target="_blank" rel="noopener"><code>smtplib</code></a> is a Python module used to send emails, utilizing the Simple Mail Transfer Protocol</li>
+<li><a href="https://docs.python.org/3/library/email.html" target="_blank" rel="noopener"><code>email</code></a> is a Python module not used to send emails, but to manage email contents</li>
+<li><a href="https://docs.python.org/3/library/email.mime.html" target="_blank" rel="noopener"><code>email.mime</code></a> is a library that uses the global <a href="https://www.wikiwand.com/en/MIME" target="_blank" rel="noopener">MIME internet standard</a> to format email messages</li>
+<li><code>sys</code> is a system library used to deal with file and program operations, and <code>time</code> is just used for delays (in our case)</li>
+</ul>
+<p>Next, lets create some variables to hold our credentials.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">address = <span class="string">'bobsmith@johndoe.com'</span></span><br><span class="line">password = <span class="string">'&lt;password&gt;'</span></span><br></pre></td></tr></table></figure>
+
+<p>Lets also initialize a connection to the Gmail SMTP mail server with those credentials.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mail = smtplib.SMTP(<span class="string">'smtp.gmail.com'</span>, <span class="number">587</span>)</span><br><span class="line">mail.ehlo()</span><br><span class="line">mail.starttls()</span><br><span class="line">mail.login(address, password)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>The <a href="https://docs.python.org/2/library/smtplib.html" target="_blank" rel="noopener"><code>mail.ehlo()</code></a> function is the application’s way of identifying itself to the server. More info <a href="https://help.returnpath.com/hc/en-us/articles/220223328-What-is-Extended-HELO-EHLO-" target="_blank" rel="noopener">here</a>. </li>
+<li>The <a href="https://docs.python.org/2/library/smtplib.html" target="_blank" rel="noopener"><code>mail.starttls()</code></a> function ensures that the connection is secure. More info <a href="https://www.wikiwand.com/en/Transport_Layer_Security" target="_blank" rel="noopener">here</a>.</li>
+</ul>
+<h3 id="Getting-Contacts"><a href="#Getting-Contacts" class="headerlink" title="Getting Contacts"></a>Getting Contacts</h3><p>Now, let’s obtain our contacts from the <code>contacts.txt</code> file! (You don’t have to write the comments, but it’s great practice if you do)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_contacts</span><span class="params">(filename)</span>:</span> <span class="comment"># input the contacts file</span></span><br><span class="line">    contacts_list = &#123;&#125; <span class="comment"># initialize dictionary </span></span><br><span class="line">    <span class="keyword">with</span> open(filename, mode = <span class="string">'r'</span>, encoding = <span class="string">'utf-8'</span>) <span class="keyword">as</span> f: <span class="comment"># open the contacts file, read only mode</span></span><br><span class="line">        contacts = f.read().split(<span class="string">'\n'</span>) <span class="comment"># split lines, add to a list</span></span><br><span class="line">        f.seek(<span class="number">0</span>) <span class="comment"># look at the beginning of the file</span></span><br><span class="line">        first = f.read() <span class="comment"># read the beginning of the file</span></span><br><span class="line">        <span class="keyword">if</span> first == <span class="string">''</span>: <span class="comment"># if it's empty, there are no contacts, print error</span></span><br><span class="line">            print(<span class="string">'Contacts file is empty.'</span>)</span><br><span class="line">            sys.exit() <span class="comment"># exit the program</span></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> contacts: <span class="comment"># iterate through contacts, add names and emails separately to a dictionary</span></span><br><span class="line">        contacts_list[item.split(<span class="string">', '</span>)[<span class="number">0</span>]] = item.split(<span class="string">', '</span>)[<span class="number">1</span>:]</span><br><span class="line">    <span class="keyword">return</span> contacts_list <span class="comment"># return contacts dictionary</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>Important elements:</p>
+<ul>
+<li><code>contacts_list</code> is a dictionary we create to hold our emails and names in <code>key:value</code> format</li>
+<li><code>with open...</code> is a python method of opening a file, reading it to an object (in our case), and closing it immediately after. We open it in <code>r</code> (reading) mode, to make sure nothing is written to the file on accident</li>
+<li><a href="https://www.wikiwand.com/en/UTF-8" target="_blank" rel="noopener"><code>utf-8</code></a> is a character encoding</li>
+<li><code>\n</code> is a newline character in Python; by splitting a file by <code>\n</code>, we are essentially splitting up all the lines</li>
+<li><code>contacts_list[item.split(&#39;, &#39;)[0]] = item.split(&#39;, &#39;)[1:]</code> adds the email and all the substitutions associated with that email to a dictionary. The format is <code>key: [value, another_value, etc.]</code></li>
+</ul>
+<h3 id="Reading-the-Message"><a href="#Reading-the-Message" class="headerlink" title="Reading the Message"></a>Reading the Message</h3><p>Great! You’re basically 1/3 of the way there!</p>
+<p><img src="https://cloud-62jdtr82i.vercel.app/tenor.gif" class="lazyload" data-srcset="https://cloud-62jdtr82i.vercel.app/tenor.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="woohoo"></p>
+<p>Add another function called <code>read_message</code> to the <code>main.py</code> file:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">read_message</span><span class="params">(filename)</span>:</span> <span class="comment">## input the message file</span></span><br><span class="line">    <span class="keyword">with</span> open(filename, <span class="string">'r'</span>, encoding = <span class="string">'utf-8'</span>) <span class="keyword">as</span> template: <span class="comment">#open the file in read mode</span></span><br><span class="line">        template_content = template.read() <span class="comment"># read the contents of the file to a variable</span></span><br><span class="line">        template.seek(<span class="number">0</span>) <span class="comment"># look at the beginning of the file</span></span><br><span class="line">        <span class="keyword">if</span> template_content == <span class="string">''</span>: <span class="comment"># if empty, message is empty</span></span><br><span class="line">            print(<span class="string">'Message file is empty.'</span>)</span><br><span class="line">            sys.exit() <span class="comment"># quit program</span></span><br><span class="line">        subject = template_content.splitlines()[<span class="number">0</span>].rstrip() <span class="comment"># obtain the first line (subject) by splitting all lines and indexing the first (0)</span></span><br><span class="line">    <span class="keyword">return</span> subject, <span class="string">'\n'</span>.join(template_content.split(<span class="string">'\n'</span>)[<span class="number">1</span>:]) <span class="comment"># return the subject and the body</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>A few things to note:</p>
+<ul>
+<li>The <code>read_message()</code> function is really similar to the contacts function!</li>
+</ul>
+<p>Lets go over:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">template_content.splitlines()[<span class="number">0</span>].rstrip()</span><br></pre></td></tr></table></figure>
+
+<p>We split the file into multiple lines in a list. From there, we obtain the first line, which is the subject, then we strip all the spaces to the right of the text. This is to ensure there isn’t a stray <code>\n</code> added by the text editor!</p>
+<p>This is also a particularly tricky part:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'\n'</span>.join(template_content.split(<span class="string">'\n'</span>)[<span class="number">1</span>:])</span><br></pre></td></tr></table></figure>
+
+<p>This line basically removes the subject line from the body of the email! Since the text is read from the message file and the subject has already been parsed, it’s not a good idea to send the subject again in the body. We split the content by newlines and keep everything after the first line; <code>[1:]</code> is the list operation that does this. More info <a href="https://www.w3schools.com/python/python_lists.asp" target="_blank" rel="noopener">here</a>!</p>
+<p>Test out both of these functions by printing their results! Here’s how to do it:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">contacts = get_contacts(<span class="string">'contacts.txt'</span>)</span><br><span class="line">subject, template_content = read_message(<span class="string">'message.txt'</span>)</span><br><span class="line">print(contacts)</span><br><span class="line">print(subject, template_content)</span><br></pre></td></tr></table></figure>
+
+<p>After doing this, go ahead and remove the print statements, but keep the variable declarations (needed in the next section).</p>
+<p>If you get an SMTP error, you need to go back to <a href="https://accounts.google.com/b/0/DisplayUnlockCaptcha" target="_blank" rel="noopener">this link</a> and complete the captcha again.</p>
+<h3 id="Formatting-and-Sending-the-Email"><a href="#Formatting-and-Sending-the-Email" class="headerlink" title="Formatting and Sending the Email"></a>Formatting and Sending the Email</h3><p>You can format and send this email in only 12 lines of code:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> contact_mail <span class="keyword">in</span> list(contacts):</span><br><span class="line">    msg = MIMEMultipart()</span><br><span class="line">    msg_body = template_content.format(*tuple(contacts[contact_mail]))</span><br><span class="line">    </span><br><span class="line">    msg[<span class="string">'From'</span>] = address</span><br><span class="line">    msg[<span class="string">'To'</span>] = contact_mail</span><br><span class="line">    msg[<span class="string">'Subject'</span>] = subject</span><br><span class="line"></span><br><span class="line">    msg.attach(MIMEText(msg_body, <span class="string">'plain'</span>))</span><br><span class="line">    print(msg)</span><br><span class="line">    mail.sendmail(address, contact_mail, msg.as_string())</span><br><span class="line">    print(<span class="string">"Sent Successfully!"</span>)</span><br><span class="line"></span><br><span class="line">mail.quit()</span><br></pre></td></tr></table></figure>
+
+<p>Here’s our first occurrence of <code>MIMEMultipart()</code>. This, as explained at the top, manages the content of the email according to a universal internet standard. There’s more in-depth info <a href="https://www.wikiwand.com/en/MIME" target="_blank" rel="noopener">here</a>. </p>
+<p>Let’s remember that our <code>contacts</code> variable is a dictionary. We need to access both the emails and substitutions associated with them. That’s where this line comes in, and does multiple things at once:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msg_body = template_content.format(*tuple(contacts[contact_mail]))</span><br></pre></td></tr></table></figure>
+
+<p>If you noticed in the <code>contacts.txt</code> file, the substitution is represented by a <code>{0}</code> . If you’ve done Python string formatting before, you may realize that character sequence allows for replacement with the <a href="https://www.w3schools.com/python/ref_string_format.asp" target="_blank" rel="noopener"><code>.format()</code></a> function! </p>
+<ul>
+<li>We first obtain the list of substitutions with <code>contacts[contact_mail]</code> - this returns a list, as explained when we wrote the <code>get_contacts()</code> function</li>
+<li><code>tuple</code> is an <a href="https://www.wikiwand.com/en/Immutable_object" target="_blank" rel="noopener">immutable</a> data type in Python. When we write <code>*tuple()</code>, we unpack the list of substitutions as arguments for the <code>format()</code> function</li>
+<li><code>template_content.format()</code> - since template_content is a string, we can use the format function to replace the <code>{0}</code> with custom arguments!</li>
+</ul>
+<p>The following chunk from above attaches the body to the email in MIME format, and sends the email!</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">msg.attach(MIMEText(msg_body, <span class="string">'plain'</span>))</span><br><span class="line">print(msg)</span><br><span class="line">mail.sendmail(address, contact_mail, msg.as_string())</span><br></pre></td></tr></table></figure>
+
+
+
+<p>At this point, go ahead and <strong>run the program</strong>. Assuming your email and password are correct, and you let your application access your Google account, the program should run successfully! Go check the emails of the contacts you wrote down.</p>
+<p>The result should be similar to this: </p>
+<p><img src="https://cloud-a1v5o0pxe.vercel.app/code_result.png" class="lazyload" data-srcset="https://cloud-a1v5o0pxe.vercel.app/code_result.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="result"></p>
+<p>If you’re having problems, go check the final code up at the top of this page and make sure you didn’t make any errors. </p>
+<hr>
+<h2 id="Further-Hacking"><a href="#Further-Hacking" class="headerlink" title="Further Hacking"></a>Further Hacking</h2><p><img src="https://cloud-mlx5oz5hm.vercel.app/tenor.gif" class="lazyload" data-srcset="https://cloud-mlx5oz5hm.vercel.app/tenor.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="yay"></p>
+<p>There are many things that can be changed in this program. Go back and see what you can modify to make it your own! Because of the modularity of the project, to add another substitution, it’s as simple as adding a <code>{1}</code> or a <code>{2}</code>  in <code>message.txt</code> and adding more commas and arguments in <code>contacts.txt</code>. Try to think of ways to make the project even better, and please share with me or others in the Hack Club community!</p>
+<p>Here are some branches of the project that build upon the code (can also be found on <a href="https://github.com/hackclub/hackclub" target="_blank" rel="noopener">GitHub</a>)</p>
+<ul>
+<li><strong>Switching Mail Servers</strong>: <a href="https://repl.it/@apexblade/RoboticEmails-MailServerSwitch" target="_blank" rel="noopener">demo and code</a> <ul>
+<li>Easily send templated emails from multiple accounts and smtp servers! </li>
+</ul>
+</li>
+<li><strong>Company Sponsor Email</strong>: <a href="https://repl.it/@apexblade/RoboticEmails-SponsorEmail#main.py" target="_blank" rel="noopener">demo and code</a> <ul>
+<li>An example of how far you can go with this project! In retrospect, it has hundreds of usages.</li>
+</ul>
+</li>
+<li><strong>Multiple Messages</strong>: <a href="https://repl.it/@apexblade/RoboticEmails-SwitchableMessages" target="_blank" rel="noopener">demo and code</a><ul>
+<li>Multiple presets for emails, select one and send!</li>
+</ul>
+</li>
+</ul>
+
+    
+      
+      <div class='footer'>
+        
+        
+        
+          <div class='copyright'>
+            <blockquote>
+              
+                
+                  
+                
+              
+                
+                  <p><a href=http://blog.rohanbansal.me/2020/09/19/Workshop-Templated-Robot-Emails/>http://blog.rohanbansal.me/2020/09/19/Workshop-Templated-Robot-Emails/</a></p>
+                
+              
+            </blockquote>
+          </div>
+        
+        
+      </div>
+    
+  </div>
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-19T16:05:01-07:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>Updated : Sep 19, 2020</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/workshop-email-python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>workshop, email, python</p></a></div>
+
+
+        
+      
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2020/10/27/Workshop-Meme-Songs-With-Arduino/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Workshop - Meme Songs With Arduino</p>
+          <p class='content'>Meme Songs with Arduino
+OverviewMeme songs are everywhere! I bet you (the reader) have been rickr...</p>
+        </a>
+      
+      
+        <a class='next' href='/2020/07/24/Game-Development-with-Heaps-io-and-Haxe/'>
+          <p class='title'>2D Game Development with Heaps.io and Haxe<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>30 minutes to 1 hour read time. Get cozy with ur laptop or PC!
+This post is meant for people who ...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> Comments</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>Contents</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Overview"><span class="toc-text">Overview</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Initial-Setup"><span class="toc-text">Initial Setup</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#File-Setup"><span class="toc-text">File Setup</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Writing-Code"><span class="toc-text">Writing Code</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Getting-Contacts"><span class="toc-text">Getting Contacts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Reading-the-Message"><span class="toc-text">Reading the Message</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Formatting-and-Sending-the-Email"><span class="toc-text">Formatting and Sending the Email</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Further-Hacking"><span class="toc-text">Further Hacking</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+      </div>
+      
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+          
+            
+              <a href="https://github.com/rohan-bansal"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="https://twitter.com/rbansal22"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/018-twitter.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/018-twitter.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+            
+              <a href="/"
+                class="social  flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/045-telegram.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/045-telegram.svg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
+                
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+</div>
+        <div><p><i>Banner drawn by Tithi Luadthong</i></p></div>
+        <div><p><strong>Based on Volantis</strong></p></div>
+      
+    
+      
+        
+      
+    
+      
+         
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="/">Copyright © 2019-2020 Rohan Bansal</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+      <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+  </div>
+  <div>
+    
+    <!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  function pjax_fancybox() {
+    $(".md").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      // 背景层
+      var bgDiv = document.createElement("div");
+      $(bgDiv).addClass("bg");
+      if ($(this).attr('bg')) {
+        $(bgDiv).css('background', $(this).attr('bg'));
+      }
+      $(this).wrap(bgDiv); // 背景层
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".article-entry").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  $(function () {
+    pjax_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+<!-- optional -->
+
+  <script>
+  
+  var SEARCH_SERVICE = "hexo" || "hexo";
+  var ROOT = "/" || "/";
+  if (!ROOT.endsWith('/')) ROOT += '/';
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+  
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+
+
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link'.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) || "Write something!";
+
+    let path = $.trim($('#pjax-comment-path').text());
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+
+    var valine = new Valine();
+    valine.init({
+      el: '#valine_container',
+      meta: meta,
+      placeholder: pagePlaceholder,
+      path: path,
+      appId: "",
+      appKey: "",
+      pageSize: '10',
+      avatar: 'robohash',
+      lang: 'en',
+      visitor: 'true',
+      highlight: 'true',
+      mathJax: 'false',
+      enableQQ: 'true',
+      requiredFields: requiredFields,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps
+    })
+  }
+
+  $(function () {
+    pjax_valine();
+  });
+</script>
+
+
+
+
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+
+  
+    
+<script src="/js/search.js"></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- more -->
+
+
+    
+      
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <script>
+      window.ShowLoading = function() {
+        NProgress.start();
+      };
+      window.HideLoading = function() {
+        NProgress.done();
+      }
+    </script>
+  
+</div>
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      $.fancybox.close();    // 关闭弹窗
+      $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
+      $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      $('.s-top').unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      window.ShowLoading();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+      // 
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+        pjax_fancybox();
+        
+        
+        
+        
+          pjax_initCopyCode();
+        
+        
+          pjax_valine();
+        
+        
+        
+        
+        
+      } catch (e) {
+        console.log(e);
+      }
+      window.HideLoading();
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.HideLoading();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+
+    
+  </div>
+</body>
+</html>
