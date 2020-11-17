@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Apollo | Rohan Bansal</title>
+  <title>Blawg | Rohan Bansal</title>
   
   <subtitle>Rohan Bansal</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://blog.rohanbansal.me/"/>
+  <link href="http://blog.rbansal.dev/"/>
   <description>My musings, experiences, and tech talks</description>
   <updated>2020-10-28T03:13:00.083Z</updated>
-  <id>http://blog.rohanbansal.me/</id>
+  <id>http://blog.rbansal.dev/</id>
   
   <author>
     <name>Rohan Bansal</name>
@@ -19,8 +19,8 @@
   
   <entry>
     <title>Workshop - Meme Songs With Arduino</title>
-    <link href="http://blog.rohanbansal.me/2020/10/27/Workshop-Meme-Songs-With-Arduino/"/>
-    <id>http://blog.rohanbansal.me/2020/10/27/Workshop-Meme-Songs-With-Arduino/</id>
+    <link href="http://blog.rbansal.dev/2020/10/27/Workshop-Meme-Songs-With-Arduino/"/>
+    <id>http://blog.rbansal.dev/2020/10/27/Workshop-Meme-Songs-With-Arduino/</id>
     <published>2020-10-28T03:11:58.000Z</published>
     <updated>2020-10-28T03:13:00.083Z</updated>
     
@@ -35,14 +35,14 @@
     
     
     
-    <category term="workshop, memes, arduino, tinkercad, coffin dance" scheme="http://blog.rohanbansal.me/tags/workshop-memes-arduino-tinkercad-coffin-dance/"/>
+    <category term="workshop, memes, arduino, tinkercad, coffin dance" scheme="http://blog.rbansal.dev/tags/workshop-memes-arduino-tinkercad-coffin-dance/"/>
     
   </entry>
   
   <entry>
     <title>Workshop - Templated Robot Emails</title>
-    <link href="http://blog.rohanbansal.me/2020/09/19/Workshop-Templated-Robot-Emails/"/>
-    <id>http://blog.rohanbansal.me/2020/09/19/Workshop-Templated-Robot-Emails/</id>
+    <link href="http://blog.rbansal.dev/2020/09/19/Workshop-Templated-Robot-Emails/"/>
+    <id>http://blog.rbansal.dev/2020/09/19/Workshop-Templated-Robot-Emails/</id>
     <published>2020-09-19T23:03:58.000Z</published>
     <updated>2020-09-19T23:05:01.803Z</updated>
     
@@ -57,14 +57,14 @@
     
     
     
-    <category term="workshop, email, python" scheme="http://blog.rohanbansal.me/tags/workshop-email-python/"/>
+    <category term="workshop, email, python" scheme="http://blog.rbansal.dev/tags/workshop-email-python/"/>
     
   </entry>
   
   <entry>
     <title>2D Game Development with Heaps.io and Haxe</title>
-    <link href="http://blog.rohanbansal.me/2020/07/24/Game-Development-with-Heaps-io-and-Haxe/"/>
-    <id>http://blog.rohanbansal.me/2020/07/24/Game-Development-with-Heaps-io-and-Haxe/</id>
+    <link href="http://blog.rbansal.dev/2020/07/24/Game-Development-with-Heaps-io-and-Haxe/"/>
+    <id>http://blog.rbansal.dev/2020/07/24/Game-Development-with-Heaps-io-and-Haxe/</id>
     <published>2020-07-24T17:31:03.000Z</published>
     <updated>2020-09-21T18:14:53.828Z</updated>
     
@@ -80,14 +80,14 @@
     
     
     
-    <category term="game_development, heaps.io, haxe, 2d" scheme="http://blog.rohanbansal.me/tags/game-development-heaps-io-haxe-2d/"/>
+    <category term="game_development, heaps.io, haxe, 2d" scheme="http://blog.rbansal.dev/tags/game-development-heaps-io-haxe-2d/"/>
     
   </entry>
   
   <entry>
     <title>My Experience Theming Windows 10</title>
-    <link href="http://blog.rohanbansal.me/2020/07/02/My-Experience-Theming-Windows-10/"/>
-    <id>http://blog.rohanbansal.me/2020/07/02/My-Experience-Theming-Windows-10/</id>
+    <link href="http://blog.rbansal.dev/2020/07/02/My-Experience-Theming-Windows-10/"/>
+    <id>http://blog.rbansal.dev/2020/07/02/My-Experience-Theming-Windows-10/</id>
     <published>2020-07-03T06:06:41.000Z</published>
     <updated>2020-09-21T18:14:33.968Z</updated>
     
@@ -102,14 +102,14 @@
     
     
     
-    <category term="windows, ricing, theme, uxpatcher" scheme="http://blog.rohanbansal.me/tags/windows-ricing-theme-uxpatcher/"/>
+    <category term="windows, ricing, theme, uxpatcher" scheme="http://blog.rbansal.dev/tags/windows-ricing-theme-uxpatcher/"/>
     
   </entry>
   
   <entry>
     <title>Compiling Aseprite for Linux</title>
-    <link href="http://blog.rohanbansal.me/2020/05/24/Compiling-Aseprite-for-Linux/"/>
-    <id>http://blog.rohanbansal.me/2020/05/24/Compiling-Aseprite-for-Linux/</id>
+    <link href="http://blog.rbansal.dev/2020/05/24/Compiling-Aseprite-for-Linux/"/>
+    <id>http://blog.rbansal.dev/2020/05/24/Compiling-Aseprite-for-Linux/</id>
     <published>2020-05-25T06:15:48.000Z</published>
     <updated>2020-09-21T18:15:05.291Z</updated>
     
@@ -124,7 +124,7 @@
     
     
     
-    <category term="linux, source, aseprite, pixelart" scheme="http://blog.rohanbansal.me/tags/linux-source-aseprite-pixelart/"/>
+    <category term="linux, source, aseprite, pixelart" scheme="http://blog.rbansal.dev/tags/linux-source-aseprite-pixelart/"/>
     
   </entry>
   

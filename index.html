@@ -20,7 +20,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>Apollo | Rohan Bansal</title>
+  <title>Blawg | Rohan Bansal</title>
   
     <meta name="keywords" content="blog, tech, code">
   
@@ -31,7 +31,7 @@
 
   <!-- feed -->
   
-    <link rel="alternate" href="/atom.xml" title="Apollo | Rohan Bansal">
+    <link rel="alternate" href="/atom.xml" title="Blawg | Rohan Bansal">
   
 
   <!-- import meta -->
@@ -69,8 +69,6 @@
   
   
   
-</head>
-
 <body>
   <header class="l_header auto shadow blur" style='opacity: 0' >
   <div class='container'>
@@ -89,7 +87,7 @@
         
         <a class="title flat-box" target="_self" href='/'>
           
-            <img no-lazy class='logo' src='/img/circle-cropped.png'/>
+            <img no-lazy class='logo' src='/img/rohan.jpg'/>
           
           
           
@@ -268,7 +266,7 @@
   <div class='top'>
     
     
-      <p class="title">Apollo</p>
+      <p class="title">Blawg</p>
     
     
       <p class="subtitle">My musings, experiences, and tech talks</p>
@@ -331,14 +329,14 @@
 
 <script>
   // 处理封面 此时 jquery 还没加载
-  if ("full" == "none") { // 移除封面
+  if ("half" == "none") { // 移除封面
     document.getElementsByClassName('cover-wrapper')[0].style.display = "none";
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
   } else {
-    if ("full" == "half") { // 半屏
+    if ("half" == "half") { // 半屏
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half');
       document.getElementsByClassName('scroll-down')[0].style.display = "none";
-    } else if ("full" == "full") { // 全屏
+    } else if ("half" == "full") { // 全屏
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full');
       document.getElementsByClassName('scroll-down')[0].style.display = "";
     }
@@ -621,7 +619,7 @@ B...
     
       
         <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='/img/circle-cropped.png'/>
+          <img no-lazy src='/img/rohan.jpg'/>
         </a>
       
     
