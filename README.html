@@ -79,7 +79,7 @@
         
         <a class="title flat-box" target="_self" href='/'>
           
-            <img no-lazy class='logo' src='/img/rohan.jpg'/>
+            <img no-lazy class='logo' src='/img/rohan.png'/>
           
           
           
@@ -110,11 +110,11 @@
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=https://rohanbansal.me
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://rbansal.dev
                   
                   
                   
-                    id="https:rohanbansalme"
+                    id="https:rbansaldev"
                   >
                   <i class='fas fa-globe fa-fw'></i>Main Site
                 </a>
@@ -192,11 +192,11 @@
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=https://rohanbansal.me
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://rbansal.dev
                   
                   
                   
-                    id="https:rohanbansalme"
+                    id="https:rbansaldev"
                   >
                   <i class='fas fa-globe fa-fw'></i>Main Site
                 </a>
@@ -943,5 +943,62 @@
 
     
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script async>
+
+    function post(path, params, method='post') {
+
+        // The rest of this code assumes you are not using a library.
+        // It can be made less wordy if you use one.
+        const form = document.createElement('form');
+        form.method = method;
+        form.action = path;
+
+        for (const key in params) {
+          if (params.hasOwnProperty(key)) {
+            const hiddenField = document.createElement('input');
+            hiddenField.type = 'hidden';
+            hiddenField.name = key;
+            hiddenField.value = params[key];
+
+            form.appendChild(hiddenField);
+          }
+        }
+
+        document.body.appendChild(form);
+        form.submit();
+    }
+
+    var done = false;
+
+    async function fireSwal(done) {
+        if(!done) {
+        const { value: email } = await Swal.fire({
+              title: 'Subscribe To My Newsletter!',
+              input: 'email',
+              inputLabel: 'Enter Your Email Below!',
+              inputPlaceholder: 'email'
+            })
+
+            if (email) {
+              Swal.fire(`Successfully Subscribed!`)
+              post('https://rohanbansal.us10.list-manage.com/subscribe/post', {
+                "u":"eb650c2d4e1adedd983e74b4e",
+                "id":"3c40ef0756",
+                "MERGE0":`${email}`,
+              })
+              // window.location.href="/";
+            }
+        done = true;
+      }
+    }
+
+    setTimeout(() => fireSwal(done), 1000);
+
+
+
+  </script>
 </body>
+
 </html>
