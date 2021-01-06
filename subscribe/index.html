@@ -60,7 +60,7 @@
 
   
   
-  
+
 <body>
   <header class="l_header auto shadow blur" style='opacity: 0' >
   <div class='container'>
@@ -399,7 +399,7 @@
   <div class="article-entry" itemprop="articleBody">
     
     
-    <p><em>A modal should pop up! If you missed it, just refresh the page.</em></p>
+    <p><em>A subscribe box should pop up! If you missed it, just refresh the page.</em></p>
 <script async>
 
 
@@ -412,6 +412,11 @@
             })
 
             if (email) {
+              post('https://rohanbansal.us10.list-manage.com/subscribe/post', {
+                "u":"eb650c2d4e1adedd983e74b4e",
+                "id":"3c40ef0756",
+                "MERGE0":`${email}`,
+              })
               Swal.fire(`Successfully Subscribed!`)
             }
     }
@@ -430,10 +435,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-20T23:30:59-08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-23T17:26:47-08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>Updated : Nov 20, 2020</p>
+    <p>Updated : Dec 23, 2020</p>
   </a>
 </div>
 
@@ -455,21 +460,6 @@
 
   
 </article>
-
-
-  
-
-  <article class="post white-box reveal shadow" id="comments">
-    <p ct><i class='fas fa-comments'></i> Comments</p>
-    
-    <div id="valine_container" class="valine_thread">
-  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
-</div>
-
-  </article>
-
-
-
 
 
 
@@ -1037,7 +1027,7 @@
       }
     }
 
-    setTimeout(() => fireSwal(done), 8000);
+    // setTimeout(() => fireSwal(done), 8000);
 
 
 

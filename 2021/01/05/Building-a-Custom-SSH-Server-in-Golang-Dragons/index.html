@@ -16,9 +16,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>Compiling Aseprite for Linux - Blawg | Rohan Bansal</title>
+  <title>Surprising People with a Dragon - SSH Servers in Golang - Blawg | Rohan Bansal</title>
   
-    <meta name="keywords" content="linux, source, aseprite, pixelart">
+    <meta name="keywords" content="ssh, golang, custom, server, vps, dragon, ascii">
   
 
   
@@ -314,7 +314,7 @@
 
 <div id="pjax-data" style="display: none">
   <div id="pjax-ispage">true</div>
-  <div id="pjax-pageTitle">Compiling Aseprite for Linux</div>
+  <div id="pjax-pageTitle">Surprising People with a Dragon - SSH Servers in Golang</div>
   <div id="pjax-enable-cover">true</div>
   <div id="pjax-comment-path"></div>
   <div id="pjax-comment-placeholder"></div>
@@ -355,8 +355,8 @@
       
       
         <h1 class="title">
-          <a href="/2020/05/24/Compiling-Aseprite-for-Linux/">
-            Compiling Aseprite for Linux
+          <a href="/2021/01/05/Building-a-Custom-SSH-Server-in-Golang-Dragons/">
+            Surprising People with a Dragon - SSH Servers in Golang
           </a>
         </h1>
         <div class='new-meta-box'>
@@ -381,7 +381,7 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>Date : May 24, 2020</p>
+    <p>Date : Jan 5, 2021</p>
   </a>
 </div>
 
@@ -401,63 +401,100 @@
   <div class="article-entry" itemprop="articleBody">
     
     
-    <p>This post details my experience compiling Aseprite (the most popular pixelart editor) for Ubuntu. It was poorly documented, so I aim to be as concise as possible so those reading have no trouble. </p>
-<p>That being said, this guide is for compiling Aseprite on Linux, not Windows. Windows has a few extra steps, and I’ll link a handy guide <a href="https://www.youtube.com/watch?v=si7N0GeqOH8" target="_blank" rel="noopener">here</a>.</p>
-<h1 id="Compiling-Tools"><a href="#Compiling-Tools" class="headerlink" title="Compiling Tools"></a>Compiling Tools</h1><p>On Linux, Aseprite requires the following packages:</p>
-<p><code>g++ cmake ninja-build libx11-dev libxcursor-dev libxi-dev libgl1-mesa-dev libfontconfig1-dev</code></p>
-<p>Install them with your package manager of choice. For example, on Ubuntu:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y g++ cmake ninja-build libx11-dev libxcursor-dev libxi-dev libgl1-mesa-dev libfontconfig1-dev</span><br></pre></td></tr></table></figure>
+    <p><img src="/images/dragon_advice.png" class="lazyload" data-srcset="/images/dragon_advice.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Want to make SSH print this out?"></p>
+<p><strong>Update 01/5/21</strong></p>
+<p>Hey guys! It’s been a while since I last posted something here (almost 3 months). My schedule is a bit erratic, so posts arrive at quite random times. I plan on writing a post every week and setting up the commenting system soon, so stay tuned for that!</p>
+<p><strong>Regularly scheduled programming</strong></p>
+<p>SSH is cool, and I recently just went down the deep rabbit hole regarding the topic. There are so many cool applications to build with this technology!</p>
+<p>Don’t know what I’m talking about? Go enter this into your terminal: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh me.rbansal.dev</span><br></pre></td></tr></table></figure>
 
-<p>You also need CMake version 3.14 or higher. To check, run:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake --version</span><br></pre></td></tr></table></figure>
+<p>Cool right? I’ll be going through the detailed process of building an SSH app like this so you can make your own! </p>
+<h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><ul>
+<li><a href="https://golang.org/" target="_blank" rel="noopener">Go</a> installed, basic knowledge of syntax</li>
+<li>A MacOS, Windows, or Linux workstation</li>
+<li>A Linux VPS to deploy the finished product (optional)</li>
+<li>An IDE to write code with</li>
+</ul>
+<h2 id="How-Does-It-Work"><a href="#How-Does-It-Work" class="headerlink" title="How Does It Work?"></a>How Does It Work?</h2><p>In my experience building this about a week ago, I had more trouble setting up the deployment environment than actually writing the script. For example, I had to switch out the default port for SSH to free it up for the purposes of this custom server, as well as install the script environment.</p>
+<h3 id="SSH-Definitions"><a href="#SSH-Definitions" class="headerlink" title="SSH Definitions"></a>SSH Definitions</h3><ol>
+<li>SSH runs over TCP (Transmission Control Protocol). A connection is handled by an SSH server (usually OpenSSH) that can send all the right TCP commands back to the client to secure the connection.</li>
+<li>The default SSH port is 22, but it can be changed to anything you like (within bounds).</li>
+<li>SSH makes use of an encryption system that requires a key on both the server and the client to authenticate. Most of the time, this is auto-generated.</li>
+</ol>
+<h3 id="Go-Definitions"><a href="#Go-Definitions" class="headerlink" title="Go Definitions"></a>Go Definitions</h3><ol>
+<li>Go is an open-source programming language developed by Google.</li>
+<li>It is statically typed and compiled, with syntax extremely similar to C, Java, and Javascript.</li>
+</ol>
+<h2 id="Building-the-Server"><a href="#Building-the-Server" class="headerlink" title="Building the Server"></a>Building the Server</h2><p>We’re ready to get started! The SSH library we’ll be using to build this script is <a href="https://github.com/gliderlabs/ssh" target="_blank" rel="noopener">this one</a>. We’ll print out an awesome dragon like in the thumbnail!</p>
+<h3 id="Writing-the-Go-script"><a href="#Writing-the-Go-script" class="headerlink" title="Writing the Go script"></a>Writing the Go script</h3><p>Let’s begin by creating a new file called <code>server.go</code> in a directory of your choice. At the top of the file, write in the following:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"io"</span></span><br><span class="line">	<span class="string">"log"</span></span><br><span class="line">	<span class="string">"runtime"</span></span><br><span class="line">	<span class="string">"strings"</span></span><br><span class="line">	<span class="string">"time"</span></span><br><span class="line">	<span class="string">"github.com/gliderlabs/ssh"</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
-<p>Next, the Ninja build system is needed. Here are a few installation methods by distro:</p>
-<p>Arch: <code>pacman -S ninja</code></p>
-<p>Debian/Ubuntu: <code>apt-get install ninja-build</code></p>
-<p>Fedora: <code>dnf install ninja-build</code></p>
-<h2 id="Skia"><a href="#Skia" class="headerlink" title="Skia"></a>Skia</h2><p>Last but not least, you will need both depot_tools and the Skia graphics library. There are two methods, compiling Skia from source or downloading a prebuilt binary.</p>
-<h3 id="Compiling-From-Source"><a href="#Compiling-From-Source" class="headerlink" title="Compiling From Source"></a>Compiling From Source</h3><p>The following script creates a <code>dep</code> folder in your root directory to store both packages in. Note that compiling Skia will take a while, depending on the machine.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mkdir <span class="variable">$HOME</span>/deps</span><br><span class="line"><span class="built_in">cd</span> <span class="variable">$HOME</span>/deps</span><br><span class="line">git <span class="built_in">clone</span> https://chromium.googlesource.com/chromium/tools/depot_tools.git</span><br><span class="line">git <span class="built_in">clone</span> -b aseprite-m81 https://github.com/aseprite/skia.git</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$&#123;PWD&#125;</span>/depot_tools:<span class="variable">$&#123;PATH&#125;</span>"</span></span><br><span class="line"><span class="built_in">cd</span> skia</span><br><span class="line">python tools/git-sync-deps</span><br><span class="line">gn gen out/Release-x64 --args=<span class="string">"is_debug=false is_official_build=true skia_use_system_expat=false skia_use_system_icu=false skia_use_system_libjpeg_turbo=false skia_use_system_libpng=false skia_use_system_libwebp=false skia_use_system_zlib=false"</span></span><br><span class="line">ninja -C out/Release-x64 skia modules</span><br></pre></td></tr></table></figure>
+<p>If you use an IDE such as Visual Studio Code, there is a chance that the <code>import</code> block will be deleted on save. This is because Go does not allow programs to contain unused imports, and at this point during our code-writing process, we don’t have any code that uses those imports yet.</p>
+<p><code>fmt</code>, <code>io</code>, <code>log</code>, and <code>strings</code> are base packages we import to deal with I/O and printing to terminal. <code>runtime</code> is used later to detect if the operating system was running Windows (you’ll see why later). <code>time</code> was used to build a “typewriter” function that emulates a person typing. Lastly, the external package at the bottom is a key libraries we use to build out this SSH program.</p>
+<p>Next, we want to print color to the terminal (Note this doesn’t work on Windows, that’s why we need to detect that). Go ahead and add these ASCII codes that indicate color:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Reset = <span class="string">"\033[0m"</span></span><br><span class="line"><span class="keyword">var</span> Red = <span class="string">"\033[31m"</span></span><br><span class="line"><span class="keyword">var</span> Green = <span class="string">"\033[32m"</span></span><br><span class="line"><span class="keyword">var</span> Yellow = <span class="string">"\033[33m"</span></span><br><span class="line"><span class="keyword">var</span> Blue = <span class="string">"\033[34m"</span></span><br><span class="line"><span class="keyword">var</span> Purple = <span class="string">"\033[35m"</span></span><br><span class="line"><span class="keyword">var</span> Cyan = <span class="string">"\033[36m"</span></span><br><span class="line"><span class="keyword">var</span> Gray = <span class="string">"\033[37m"</span></span><br><span class="line"><span class="keyword">var</span> White = <span class="string">"\033[97m"</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="Prebuilt-Binary"><a href="#Prebuilt-Binary" class="headerlink" title="Prebuilt Binary"></a>Prebuilt Binary</h3><p>Before downloading anything, run: </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/deps ~/deps/skia</span><br></pre></td></tr></table></figure>
+<p>The first variable, <code>Reset</code>, resets the color after we use it. Let’s create a function now that utilizes these colors to typewrite something to the terminal! Go ahead and add this at the bottom of the file:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">typewrite</span><span class="params">(w io.Writer, content <span class="keyword">string</span>)</span></span> &#123;</span><br><span class="line">	chars := strings.Split(content, <span class="string">""</span>)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> _, c := <span class="keyword">range</span> chars &#123;</span><br><span class="line">		fmt.Fprint(w, c)</span><br><span class="line">		time.Sleep(<span class="number">30</span> * time.Millisecond)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>This ensures the binary is easily accessible by the aseprite install script detailed later in the article. Feel free to change the path, but remember to change the directory in the install script as well.</p>
-<p>Then, go ahead and download the <a href="https://github.com/aseprite/skia/releases" target="_blank" rel="noopener">release</a>. Make sure the branch is Skia-m81. After downloading, extract the contents into the <code>deps/skia</code> directory. </p>
-<h1 id="Compiling-Aseprite"><a href="#Compiling-Aseprite" class="headerlink" title="Compiling Aseprite"></a>Compiling Aseprite</h1><p>Now, you have to pull the official GitHub repository for Aseprite. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --recursive https://github.com/aseprite/aseprite.git</span><br></pre></td></tr></table></figure>
+<p>Let’s go over this part by part.</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">typewrite</span><span class="params">(w io.Writer, content <span class="keyword">string</span>)</span></span> &#123;</span><br></pre></td></tr></table></figure>
 
-<p>The line above will create a folder called <code>aseprite</code> in the directory you ran the command in. I recommend creating it in your root directory, but it shouldn’t matter where.</p>
-<p>For future reference, to update Aseprite, run the following commands:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> aseprite</span><br><span class="line">git pull</span><br><span class="line">git submodule update --init --recursive</span><br></pre></td></tr></table></figure>
+<p>We first declare a function that takes two inputs: an <code>io.Writer</code> object, and a <code>string</code> object. The first parameter will be the “terminal” we instantiate later. The second is the string we want to type!</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chars := strings.Split(content, <span class="string">""</span>)</span><br></pre></td></tr></table></figure>
 
-<p>Next, you have to create a build directory to store compile output and the generated Aseprite binary. Modify the first command below if you cloned Aseprite in a different location.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/aseprite</span><br><span class="line">mkdir build</span><br><span class="line"><span class="built_in">cd</span> build</span><br></pre></td></tr></table></figure>
+<p>Next, we create a list of characters by splitting the string up into letters.</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> _, c := <span class="keyword">range</span> chars &#123;</span><br><span class="line">    fmt.Fprint(w, c)</span><br><span class="line">    time.Sleep(<span class="number">30</span> * time.Millisecond)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>There are only a few more commands to get Aseprite working! Next up is compilation with CMake. Remember, if you decided to install Skia in another location, replace <code>$HOME/deps/skia</code> with that path.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cmake \</span><br><span class="line">  -DCMAKE_BUILD_TYPE=RelWithDebInfo \</span><br><span class="line">  -DLAF_BACKEND=skia \</span><br><span class="line">  -DSKIA_DIR=<span class="variable">$HOME</span>/deps/skia \</span><br><span class="line">  -DSKIA_LIBRARY_DIR=<span class="variable">$HOME</span>/deps/skia/out/Release-x64 \</span><br><span class="line">  -G Ninja \</span><br><span class="line">  ..</span><br></pre></td></tr></table></figure>
+<p>Last, we iterate over the list of characters and print out the letter we are currently on, then put the thread to “sleep” for a few milliseconds. This results in a really cool typewriter effect!</p>
+<p><img src="/images/typewriting.gif" class="lazyload" data-srcset="/images/typewriting.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="typewriting!"></p>
+<p>Now, in that GIF, you can see that I colored my name! Let’s go ahead and do that with our typewriting function. To keep things modular, let’s create a new function called <code>colorType</code> that uses <code>typewrite</code> but with color!</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">colorType</span><span class="params">(w io.Writer, text <span class="keyword">string</span>, color <span class="keyword">string</span>)</span></span> &#123;</span><br><span class="line">	typewrite(w, color+text+Reset)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>Finally, run this to compile the Aseprite binary:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ninja aseprite</span><br></pre></td></tr></table></figure>
+<p>This function basically takes the same parameters as <code>typewrite</code>, but with an extra one called <code>color</code>. We just set the color of the text inputted and continue to pass it to our typewrite function!</p>
+<p>Last but not least, we’ll build our final helper function that prints empty lines to space out text.</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">printEnd</span><span class="params">(w io.Writer, ends <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; ends; i++ &#123;</span><br><span class="line">		fmt.Fprint(w, <span class="string">"\n"</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>There you have it! After the compilation finishes, navigate to <code>aseprite/build/bin</code> and you should see the aseprite file. You can run it in terminal with:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./aseprite</span><br></pre></td></tr></table></figure>
+<p>We iterate <strong>n</strong> amount of times, printing spaces (<code>\n</code>) as we go.</p>
+<p>Alright, it’s time to write the main function! Let’s add the following code at the bottom of the file:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> runtime.GOOS == <span class="string">"windows"</span> &#123;</span><br><span class="line">		Reset = <span class="string">""</span></span><br><span class="line">		Red = <span class="string">""</span></span><br><span class="line">		Green = <span class="string">""</span></span><br><span class="line">		Yellow = <span class="string">""</span></span><br><span class="line">		Blue = <span class="string">""</span></span><br><span class="line">		Purple = <span class="string">""</span></span><br><span class="line">		Cyan = <span class="string">""</span></span><br><span class="line">		Gray = <span class="string">""</span></span><br><span class="line">		White = <span class="string">""</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>However, for ease of access, you may want to launch it from the applications menu or the dock. The next section explains the process of creating a desktop file to do this.</p>
-<h1 id="Installing-Aseprite-Globally"><a href="#Installing-Aseprite-Globally" class="headerlink" title="Installing Aseprite Globally"></a>Installing Aseprite Globally</h1><p>To install Aseprite system-wide, you need to make use of the .desktop file format. For example, this is my entry for Aseprite, installed in <code>/usr/share/applications</code>:</p>
-<p>aseprite.desktop</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">X-AppInstall-Package=aseprite</span><br><span class="line">X-AppInstall-Popcon=0</span><br><span class="line">X-AppInstall-Section=universe</span><br><span class="line"></span><br><span class="line">Name=ASEPRITE</span><br><span class="line">Comment=Sprite Editor</span><br><span class="line">Exec=aseprite</span><br><span class="line">Icon=aseprite</span><br><span class="line">Terminal=<span class="literal">false</span></span><br><span class="line">Type=Application</span><br><span class="line">Categories=Graphics;2DGraphics;RasterGraphics;</span><br><span class="line"></span><br><span class="line">X-Ubuntu-Gettext-Domain=app-install-data</span><br></pre></td></tr></table></figure>
+<p>What does this <code>if</code> statement do? Well, since Windows cannot interpret ASCII color codes, we have to remove them 😭. </p>
+<p>Now for the fun part! To intercept an SSH connection and do cool things with it, we need to add an SSH Handler and listen for connections. Let’s do so like this (put it inside the <code>main</code> function, under the <code>if</code> statement):</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ssh.Handle(<span class="function"><span class="keyword">func</span><span class="params">(s ssh.Session)</span></span> &#123;</span><br><span class="line">    </span><br><span class="line">&#125;)</span><br><span class="line">           </span><br><span class="line">log.Println(<span class="string">"Started SSH server on port 2222"</span>)</span><br><span class="line">log.Println(<span class="string">"System: "</span> + runtime.GOOS)</span><br><span class="line">log.Fatal(ssh.ListenAndServe(<span class="string">":2222"</span>, <span class="literal">nil</span>))</span><br></pre></td></tr></table></figure>
 
-<p>As arguments for this file differ based on distribution, we’ll use the <code>alacarte</code> package. This program is available in most package repositories, like the AUR and apt. </p>
-<p>To install on Ubuntu, run:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y alacarte</span><br></pre></td></tr></table></figure>
+<p>The <code>ssh.Handle()</code> function is where we’re going to be printing our dragon. The other three lines log some essential information and start the server on a specific port, which is 2222.</p>
+<p>Before we test this out, let’s print something to the terminal! To do this, we need to create an object that represents our terminal instance. Inside the <code>ssh.Handle()</code> function, add the following:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ssh.Handle(<span class="function"><span class="keyword">func</span><span class="params">(s ssh.Session)</span></span> &#123;</span><br><span class="line">    <span class="comment">// add the next 3 lines</span></span><br><span class="line">    term := terminal.NewTerminal(s, <span class="string">""</span>)</span><br><span class="line">	colorType(term, <span class="string">"hello world"</span>, Purple)</span><br><span class="line">	printEnd(term, <span class="number">1</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<p>After installation, run the command <code>alacarte</code> in a terminal, and a GUI should pop up. In the left sidebar, click “Graphics”. </p>
-<p>From here, the “New Item” button in the right sidebar should be clickable. A new GUI should pop up, and you can fill in details such as the name of the program (Aseprite), and the command to be run. </p>
-<p>For the command, click “Browse”, navigate to <code>~/aseprite/build/bin/</code> (or wherever you installed it), and click the aseprite binary. Once you close the file chooser, the input prompt section should be filled with a command ending with “aseprite”. Finally, add a comment and an icon (if you want to), and save. </p>
-<p>If you want the icon to be the official Aseprite icon, navigate to <code>~/aseprite/data/icons</code>, which has a few images to choose from.</p>
-<h1 id="Done"><a href="#Done" class="headerlink" title="Done!"></a>Done!</h1><p>Aseprite should now be accessible when searching the applications menu. It should also be pinnable to the dock.</p>
-<p>I hope this article helped, and good luck on your pixelart journey!</p>
+<p>The first line instantiates a terminal, with the prompt being empty. In this tutorial, you’ll never see this prompt, but if you decide to expand on this feel free to change the text to *”Press [Enter] To Continue…”* or something!</p>
+<p>Now go ahead and save the file so we can test it out! If you’re on Mac/Linux, enter the following into your terminal in the project directory:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">go</span> run server.<span class="keyword">go</span></span><br></pre></td></tr></table></figure>
+
+<p>This code runs the server. You should see the log output, which details that the server started and the operating system. Next, enter this command (Windows will have to use PuTTY):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -p 2222 &lt;hostname&gt;@127.0.0.1</span><br></pre></td></tr></table></figure>
+
+<p>This allows you to SSH into your own machine to test out the program! Replace <code>&lt;hostname&gt;</code> with the hostname of your computer.</p>
+<p><img src="/images/ssh-output.png" class="lazyload" data-srcset="/images/ssh-output.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Do you see this?"></p>
+<p>If you see output like above, you did it! SSH is now set up! As a bonus, let’s replace that “hello” with a dragon:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">ssh.Handle(<span class="function"><span class="keyword">func</span><span class="params">(s ssh.Session)</span></span> &#123;</span><br><span class="line">		term := terminal.NewTerminal(s, <span class="string">""</span>)</span><br><span class="line">		colorType(term, <span class="string">`___</span></span><br><span class="line"><span class="string">						/ \  //\</span></span><br><span class="line"><span class="string">		|\___/|      /   \//  \\</span></span><br><span class="line"><span class="string">		/0  0  \__  /    //  | \ \    </span></span><br><span class="line"><span class="string">		/     /  \/_/    //   |  \  \  </span></span><br><span class="line"><span class="string">		@_^_@'/   \/_   //    |   \   \ </span></span><br><span class="line"><span class="string">		//_^_/     \/_ //     |    \    \</span></span><br><span class="line"><span class="string">	( //) |        \///      |     \     \</span></span><br><span class="line"><span class="string">	( / /) _|_ /   )  //       |      \     _\</span></span><br><span class="line"><span class="string">( // /) '/,_ _ _/  ( ; -.    |    _ _\.-~        .-~~~^-.</span></span><br><span class="line"><span class="string">(( / / )) ,-&#123;        _       -.|.-~-.           .~          .</span></span><br><span class="line"><span class="string">(( // / ))  '/\      /                 ~-. _ .-~      .-~^-.  \</span></span><br><span class="line"><span class="string">(( /// ))       .   &#123;            &#125;                   /      \  \</span></span><br><span class="line"><span class="string">(( / ))     .----~-.\        \-'                 .~         \   . \^-.</span></span><br><span class="line"><span class="string">			///.----..&gt;        \             _ -~              .  ^-   ^-_</span></span><br><span class="line"><span class="string">			///-._ _ _ _ _ _ _&#125;^ - - - - ~                     ~-- ,.-~</span></span><br><span class="line"><span class="string">																/.-~`</span>, Purple)</span><br><span class="line">		printEnd(term, <span class="number">1</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>Remember to copy and paste this exactly as it is, or the ASCII art will mess up a bit. Feel free to replace the dragon with whatever you want!</p>
+<h2 id="Extra-Deployment-to-a-VPS"><a href="#Extra-Deployment-to-a-VPS" class="headerlink" title="Extra - Deployment to a VPS"></a>Extra - Deployment to a VPS</h2><p>I won’t go too in-depth about deployment here, as much of it can be found online. I will, however, outline the steps here to put this online!</p>
+<ol>
+<li>Find a VPS (Virtual Private Server)</li>
+<li>SSH into the VPS using the default port (usually 22)</li>
+<li>Modify the default port in <code>/etc/ssh/sshd_config</code> and make it another arbitrary one (e.g. 4242)</li>
+<li>Use <code>rsync</code> , <code>scp</code>, or <code>ftp</code> to copy your Go script into the VPS. Install Go as well!</li>
+<li>Using <code>nano</code>, change the default port at the end of the <code>main()</code> function in the script to <strong>22</strong></li>
+<li>Set up a domain name that points to your VPS so anyone can SSH</li>
+<li>Run the Go script with <code>go run server.go</code></li>
+<li>Test it out! On a different computer try to ssh into your VPS’s IP address</li>
+</ol>
+<h2 id="Final-Notes"><a href="#Final-Notes" class="headerlink" title="Final Notes"></a>Final Notes</h2><p>My personal SSH server code is not up on GitHub yet; you’ll have to refer to this article for the time being. I was heavily inspired by an SSH game I came across by <a href="https://github.com/zachlatta" target="_blank" rel="noopener">Zach Latta</a> called SSHTron. Go SSH into <code>sshtron.zachlatta.com</code> to check it out!</p>
+<p>Again, I know I haven’t posted in a while, but I made a new year’s resolution to start writing a bit here every weekend. That way, I can look back on it in the future and remember!</p>
+<p>Anyway, I hope you all had fun building this project, as I think there aren’t many tutorials out there yet on the subject. Feel free to contact me via the methods on my <a href="https://rbansal.dev" target="_blank" rel="noopener">website</a> if you have any questions or want to share a cool creation!</p>
 
     
       
@@ -473,7 +510,7 @@
                 
               
                 
-                  <p><a href=http://blog.rbansal.dev/2020/05/24/Compiling-Aseprite-for-Linux/>http://blog.rbansal.dev/2020/05/24/Compiling-Aseprite-for-Linux/</a></p>
+                  <p><a href=http://blog.rbansal.dev/2021/01/05/Building-a-Custom-SSH-Server-in-Golang-Dragons/>http://blog.rbansal.dev/2021/01/05/Building-a-Custom-SSH-Server-in-Golang-Dragons/</a></p>
                 
               
             </blockquote>
@@ -491,10 +528,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-21T11:15:05-07:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-01-05T19:23:19-08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>Updated : Sep 21, 2020</p>
+    <p>Updated : Jan 5, 2021</p>
   </a>
 </div>
 
@@ -503,7 +540,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/linux-source-aseprite-pixelart/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>linux, source, aseprite, pixelart</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/ssh-golang-custom-server-vps-dragon-ascii/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>ssh, golang, custom, server, vps, dragon, ascii</p></a></div>
 
 
         
@@ -520,11 +557,12 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/2020/07/02/My-Experience-Theming-Windows-10/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>My Experience Theming Windows 10</p>
-          <p class='content'>I recently dove into the world of Windows 10 theming, and thought I should share my experience. I...</p>
-        </a>
       
+        <a class='next' href='/2020/10/27/Workshop-Meme-Songs-With-Arduino/'>
+          <p class='title'>Workshop - Meme Songs With Arduino<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Meme Songs with Arduino
+OverviewMeme songs are everywhere! I bet you (the reader) have been rickr...</p>
+        </a>
       
     </div>
   
@@ -551,7 +589,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Skia"><span class="toc-text">Skia</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Compiling-From-Source"><span class="toc-text">Compiling From Source</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Prebuilt-Binary"><span class="toc-text">Prebuilt Binary</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Requirements"><span class="toc-text">Requirements</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-Does-It-Work"><span class="toc-text">How Does It Work?</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SSH-Definitions"><span class="toc-text">SSH Definitions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Go-Definitions"><span class="toc-text">Go Definitions</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Building-the-Server"><span class="toc-text">Building the Server</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Writing-the-Go-script"><span class="toc-text">Writing the Go script</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Extra-Deployment-to-a-VPS"><span class="toc-text">Extra - Deployment to a VPS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Final-Notes"><span class="toc-text">Final Notes</span></a></li></ol>
     </div>
   </section>
 
