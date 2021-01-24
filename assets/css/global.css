@@ -153,7 +153,7 @@ iframe {
 :root {
   --link-color: rgba(52, 52, 52, 1);
   --text-color: rgba(68, 68, 68, 1);
-  --alt-color: rgba(41, 116, 255, 1);
+  --alt-color: rgb(224, 100, 100);
   --overlay-color: rgba(255, 255, 255, 0.85);
   --hint-color: #8a8e99;
   --background-color: #fff;
@@ -166,7 +166,7 @@ iframe {
     --color-mode: "dark";
     --link-color: rgba(255, 255, 255, 0.9);
     --text-color: rgba(255, 255, 255, 1);
-    --alt-color: rgba(113, 157, 240, 1);
+    --alt-color:  rgb(224, 100, 100);
     --overlay-color: rgba(0, 0, 0, 0.85);
     --hint-color: #8492a6;
     --background-color: #121217;
