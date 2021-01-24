@@ -307,6 +307,13 @@ h6,
   margin-bottom: 2.4rem;
 }
 
+.tag__description {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 2.4rem;
+}
+
 @media (max-width: 500px) {
   .post__title,
   .tag__title {

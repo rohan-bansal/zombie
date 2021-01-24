@@ -5,6 +5,7 @@ into the {body} of the default.hbs template --}}
 
 <main class="main_minimal" role="main">
     <h1 class="tag__title">#{{tag.name}}</h1>
+    <h3 class="tag__description">{{description}}</h3>
     {{#foreach posts}}
     {{> card}}
     {{/foreach}}
