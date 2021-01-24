@@ -1,12 +1,4 @@
-# Callisto Theme for Ghost
+# Zombie
 
-Callisto is a content focused responsive theme for [Ghost](http://github.com/tryghost/ghost/), designed for a personal blog and portfolio.
+Zombie is a minimalist [ghost](https://ghost.org/) theme for code-accustomed eyes. Heavily inspired by [ganymede](https://github.com/itsmingjie/ganymede). Demo [here](https://rbansal.dev).
 
-## Demo
-
-* [Blog](http://jackyeh.me/)
-* [Post](http://jackyeh.me/why-you-should-write-today/)
-
-## Copyright & License
-
-Copyright (C) 2019 Jack Yeh - Released under the MIT License.
