@@ -865,3 +865,33 @@ figure .fluidbox--closed .fluidbox__ghost {
   color: var(--text-color);
   border: 2px solid var(--text-color);
 }
+
+.archives__ol {
+  list-style: none;
+}
+
+.archives__li {
+  margin-top: 11px;
+  margin-bottom: 11px;
+  display: flex;
+  flex-direction: row;
+}
+
+.archives__li_small {
+  font-family: 'IBM Plex Sans', sans-serif;
+  margin-top: 4px;
+  color: #8492a6;
+  font-size: 15px;
+  margin-right: 25px;
+}
+
+.archives__li_strong {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: rgb(224, 100, 100);
+}
+
+
+.archives__li_strong:hover {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: rgb(238, 131, 131);
+}

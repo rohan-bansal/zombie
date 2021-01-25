@@ -22,10 +22,17 @@
     <br />
     <br />
     {{#get "posts" include="author,tags"}}
-        {{#foreach posts}}
-            <h2 class="card__title"><a href="{{url}}">{{title}}</a></h2>
-            <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
-        {{/foreach}}
+        <ol class="archives__ol">
+            {{#foreach posts}}
+            <li>
+                <a class="archives__li" href="{{url}}">
+                    <small class="archives__li_small">{{date format="YYYY-MM-DD"}}</small>
+                    <strong class="archives__li_strong">{{title}}</strong>
+                </a>
+            </li>                
+            {{/foreach}}
+        </ol>
+     
     {{/get}}
 
 </main>
