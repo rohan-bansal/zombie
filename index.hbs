@@ -4,6 +4,23 @@ into the {body} of the default.hbs template --}}
 {{> header}}
 
 <main class="main_minimal" role="main">
+
+    <article class="article__wrapper" role="article">
+        <header>
+            <h1 class="post__title">
+                Blog
+            </h1>
+        </header>
+
+        <section class="post__content-wrapper">
+            <div class="post__content">
+               A compendium of my musings, experiences, and tech talks.
+            </div>
+        </section>
+    </article>
+
+    <br />
+
     {{#foreach posts}}
         {{> card}}
     {{/foreach}}
