@@ -1,0 +1,33 @@
+{{!< default}}
+
+{{> header}}
+
+<main class="main_minimal" role="main">
+
+    <article class="article__wrapper" role="article">
+        <header>
+            <h1 class="post__title">
+                Archives
+            </h1>
+            <div class="post__content">
+               All my writing since the beginning of time (at least, since I started this blog).
+            </div>
+        </header>
+    </article>
+
+    <br />
+
+    <hr class="post__separator">
+    
+    <br />
+    <br />
+    {{#get "posts" include="author,tags"}}
+        {{#foreach posts}}
+            <h2 class="card__title"><a href="{{url}}">{{title}}</a></h2>
+            <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+        {{/foreach}}
+    {{/get}}
+
+</main>
+
+{{> footer}}
